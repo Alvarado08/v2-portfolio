@@ -4,6 +4,6 @@
   },
   "scripts": {
     "build": "tailwindcss -i ./src/app.css -o ./dist/main.css",
-    "watch": "tailwindcss -i ./src/input.css -o ./dist/output.css --watch"
+    "watch": "tailwindcss -i ./src/app.css -o ./dist/main.css --watch"
   }
 }

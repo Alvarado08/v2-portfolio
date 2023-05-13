@@ -4,11 +4,84 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;600;700&family=Fira+Sans:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="dist/main.css">
     <script src="src/app.js" defer></script>
     <title>Jorge Alvarado</title>
 </head>
-<body class="flex items-center justify-center min-h-screen bg-[#F1FAEE]">
-    <h1 class="text-4xl text-black underline underline-offset-8 decoration-[#E63946]">All Set Up!</h1>
+<body class="relative bg-honeyDew min-h-screen">
+    <!-- Navbar -->
+    <nav id="nav-bar" class="sticky top-0 mx-auto py-3 px-8 bg-transparent">
+        <!-- Navbar Flex Container -->
+        <div id="nav-items-container" class="flex items-center justify-between">
+            <!-- Logo -->
+            <img id="logo" class="w-14" src="src/img/FullLogo_Transparent_NoBuffer.png" alt="logo">
+            <div id="menu-items" class="hidden md:flex items-center space-x-5 font-firaSans text-xl">
+                <a class="font-bold" href="#hero">Home</a>
+                <a class="font-bold" href="#">About</a>
+                <a class="font-bold" href="#">Toolbox</a>
+                <a class="font-bold" href="#">Projects</a>
+                <a class="font-bold" href="#">Contact</a>
+                <!-- Theme Icon -->
+                <svg xmlns="http://www.w3.org/2000/svg" id="theme-icon" class="icon icon-tabler icon-tabler-moon hover:cursor-pointer" width="24" height="24" viewBox="0 0 24 24" stroke-width="3" 
+                    stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z"></path>
+                </svg>
+            </div>
+            <!-- Mobile Menu -->
+            <svg xmlns="http://www.w3.org/2000/svg" class="block md:hidden icon icon-tabler icon-tabler-menu-2" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                <path d="M4 6l16 0"></path>
+                <path d="M4 12l16 0"></path>
+                <path d="M4 18l16 0"></path>
+            </svg>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="mx-auto px-8">
+        <!-- Hero Main Container -->
+        <main class="flex items-center justify-between">
+            <!-- Hero Info Container -->
+            <div class="flex flex-col items-start justify-start">
+                <h2 class="font-barlow font-bold text-2xl md:text-4xl text-spaceCadet">Hello, I'm</h2>
+                <h1 class="font-firaSans font-bold text-4xl md:text-6xl underline underline-offset-[.64rem] md:underline-offset-[.85rem] decoration-desirePink">Jorge Alvarado</h1>
+                <p class="text-spaceCadet font-bold text-lg md:text-2xl leading-5 md:leading-none mt-2 md:mt-4">
+                    Web Developer passionate about technology,
+                    seeking new challenges and bringing ideas to life
+                </p>
+                <div class="flex items-center space-x-3 mt-2">
+                    <a href="https://github.com/Alvarado08" target="_blank" title="Github">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="36" height="36" viewBox="0 0 24 24" stroke-width="3" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                            <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5"></path>
+                        </svg>
+                    </a>
+                    <a href="https://www.icodethis.com/jalva08" target="_blank" title="iCodeThis">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-device-desktop-code" width="36" height="36" viewBox="0 0 24 24" stroke-width="3" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                            <path d="M12.5 16h-8.5a1 1 0 0 1 -1 -1v-10a1 1 0 0 1 1 -1h16a1 1 0 0 1 1 1v8"></path>
+                            <path d="M7 20h4"></path>
+                            <path d="M9 16v4"></path>
+                            <path d="M20 21l2 -2l-2 -2"></path>
+                            <path d="M17 17l-2 2l2 2"></path>
+                        </svg>
+                    </a>
+                    <a href="https://twitter.com/jalva08" target="_blank" title="Twitter">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-twitter" width="36" height="36" viewBox="0 0 24 24" stroke-width="3" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                            <path d="M22 4.01c-1 .49 -1.98 .689 -3 .99c-1.121 -1.265 -2.783 -1.335 -4.38 -.737s-2.643 2.06 -2.62 3.737v1c-3.245 .083 -6.135 -1.395 -8 -4c0 0 -4.182 7.433 4 11c-1.872 1.247 -3.739 2.088 -6 2c3.308 1.803 6.913 2.423 10.034 1.517c3.58 -1.04 6.522 -3.723 7.651 -7.742a13.84 13.84 0 0 0 .497 -3.753c0 -.249 1.51 -2.772 1.818 -4.013z"></path>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <div class="aspect-w-16 aspect-h-9">
+                <img class="w-full" src="src/img/headshot.png" alt="headshot">
+            </div>
+        </main>
+    </section>
 </body>
 </html>

@@ -522,25 +522,149 @@ video {
   --tw-backdrop-sepia:  ;
 }
 
+.relative {
+  position: relative;
+}
+
+.sticky {
+  position: sticky;
+}
+
+.top-0 {
+  top: 0px;
+}
+
+.mx-auto {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.mt-1 {
+  margin-top: 0.25rem;
+}
+
+.mt-2 {
+  margin-top: 0.5rem;
+}
+
+.mt-6 {
+  margin-top: 1.5rem;
+}
+
+.mt-5 {
+  margin-top: 1.25rem;
+}
+
+.mt-\[\.90rem\] {
+  margin-top: .90rem;
+}
+
+.mt-\[1rem\] {
+  margin-top: 1rem;
+}
+
+.mt-4 {
+  margin-top: 1rem;
+}
+
+.mt-3 {
+  margin-top: 0.75rem;
+}
+
+.block {
+  display: block;
+}
+
 .flex {
   display: flex;
+}
+
+.hidden {
+  display: none;
 }
 
 .min-h-screen {
   min-height: 100vh;
 }
 
+.w-14 {
+  width: 3.5rem;
+}
+
+.w-full {
+  width: 100%;
+}
+
+.max-w-md {
+  max-width: 28rem;
+}
+
+.max-w-sm {
+  max-width: 24rem;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.items-start {
+  align-items: flex-start;
+}
+
 .items-center {
   align-items: center;
 }
 
-.justify-center {
-  justify-content: center;
+.justify-start {
+  justify-content: flex-start;
 }
 
-.bg-\[\#F1FAEE\] {
+.justify-between {
+  justify-content: space-between;
+}
+
+.space-x-3 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-x-reverse: 0;
+  margin-right: calc(0.75rem * var(--tw-space-x-reverse));
+  margin-left: calc(0.75rem * calc(1 - var(--tw-space-x-reverse)));
+}
+
+.space-x-5 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-x-reverse: 0;
+  margin-right: calc(1.25rem * var(--tw-space-x-reverse));
+  margin-left: calc(1.25rem * calc(1 - var(--tw-space-x-reverse)));
+}
+
+.bg-honeyDew {
   --tw-bg-opacity: 1;
   background-color: rgb(241 250 238 / var(--tw-bg-opacity));
+}
+
+.bg-transparent {
+  background-color: transparent;
+}
+
+.px-8 {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.py-3 {
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
+
+.font-firaSans {
+  font-family: Fira Sans, sans-serif;
+}
+
+.font-barlow {
+  font-family: Barlow, sans-serif;
+}
+
+.text-2xl {
+  font-size: 1.5rem;
+  line-height: 2rem;
 }
 
 .text-4xl {
@@ -548,19 +672,159 @@ video {
   line-height: 2.5rem;
 }
 
-.text-black {
+.text-6xl {
+  font-size: 3.75rem;
+  line-height: 1;
+}
+
+.text-lg {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+}
+
+.text-xl {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+
+.font-bold {
+  font-weight: 700;
+}
+
+.leading-3 {
+  line-height: .75rem;
+}
+
+.leading-\[10px\] {
+  line-height: 10px;
+}
+
+.leading-\[5px\] {
+  line-height: 5px;
+}
+
+.leading-\[\.50rem\] {
+  line-height: .50rem;
+}
+
+.leading-\[\.70rem\] {
+  line-height: .70rem;
+}
+
+.leading-\[\.90rem\] {
+  line-height: .90rem;
+}
+
+.leading-5 {
+  line-height: 1.25rem;
+}
+
+.text-spaceCadet {
   --tw-text-opacity: 1;
-  color: rgb(0 0 0 / var(--tw-text-opacity));
+  color: rgb(29 53 87 / var(--tw-text-opacity));
 }
 
 .underline {
   text-decoration-line: underline;
 }
 
-.decoration-\[\#E63946\] {
+.decoration-desirePink {
   text-decoration-color: #E63946;
+}
+
+.underline-offset-4 {
+  text-underline-offset: 4px;
 }
 
 .underline-offset-8 {
   text-underline-offset: 8px;
+}
+
+.underline-offset-\[1rem\] {
+  text-underline-offset: 1rem;
+}
+
+.underline-offset-\[\.80rem\] {
+  text-underline-offset: .80rem;
+}
+
+.underline-offset-\[\.85rem\] {
+  text-underline-offset: .85rem;
+}
+
+.underline-offset-\[\.75rem\] {
+  text-underline-offset: .75rem;
+}
+
+.underline-offset-\[\.70rem\] {
+  text-underline-offset: .70rem;
+}
+
+.underline-offset-\[\.65rem\] {
+  text-underline-offset: .65rem;
+}
+
+.underline-offset-\[\.68rem\] {
+  text-underline-offset: .68rem;
+}
+
+.underline-offset-\[\.67rem\] {
+  text-underline-offset: .67rem;
+}
+
+.underline-offset-\[\.66rem\] {
+  text-underline-offset: .66rem;
+}
+
+.underline-offset-\[\.64rem\] {
+  text-underline-offset: .64rem;
+}
+
+.hover\:cursor-pointer:hover {
+  cursor: pointer;
+}
+
+@media (min-width: 768px) {
+  .md\:mt-1 {
+    margin-top: 0.25rem;
+  }
+
+  .md\:mt-4 {
+    margin-top: 1rem;
+  }
+
+  .md\:flex {
+    display: flex;
+  }
+
+  .md\:hidden {
+    display: none;
+  }
+
+  .md\:max-w-xl {
+    max-width: 36rem;
+  }
+
+  .md\:text-2xl {
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+
+  .md\:text-4xl {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
+  }
+
+  .md\:text-6xl {
+    font-size: 3.75rem;
+    line-height: 1;
+  }
+
+  .md\:leading-none {
+    line-height: 1;
+  }
+
+  .md\:underline-offset-\[\.85rem\] {
+    text-underline-offset: .85rem;
+  }
 }
