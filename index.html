@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="src/img/FullLogo_Transparent_NoBuffer.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;600;700&family=Fira+Sans:wght@400;600;700&display=swap" rel="stylesheet">
@@ -85,9 +86,9 @@
     </section>
 
     <!-- About & Toolbox Sections -->
-    <section id="about" class="mx-auto px-8 md:mt-16">
+    <section id="about" class="mx-auto px-8 py-16 h-full">
         <!-- About & Toolbox Main Container -->
-        <div class="flex flex-col items-center md:items-start md:flex-row md:justify-between space-y-6 md:space-y-0">
+        <div class="flex flex-col items-center md:items-start md:flex-row md:justify-between md:space-x-8 space-y-6 md:space-y-0">
             <!-- About Section -->
             <section id="about">
                 <!-- About Main Container -->
@@ -97,12 +98,12 @@
                     <!-- About Content -->
                     <section class="mt-8 space-y-3 leading-5 md:leading-1">
                         <p class="text-spaceCadet font-bold text-lg md:text-2xl">
-                            I’m a Web Developer passionate about making people’s life easier through code along with the use of reliable tools and technolgies.
-                            I love to approach each project with the same level of enthusiasm and attention to detail with the goal of bringing solutions to the table. 
-                            At the heart of my work is a desire to constantly learn and grow as a developer while staying up-to-date with the latest trends and best practices. 
+                            I’m a Web Developer passionate about making people’s life easier through code.
+                            I love to approach each task with enthusiasm and attention to detail with the goal of bringing solutions to the table. 
+                            At the heart of my work is a desire to constantly learn and grow while staying up-to-date with the latest trends and best practices. 
                         </p>
                         <p class="text-spaceCadet font-bold text-lg md:text-2xl">
-                            In my spare time I like to spend time with family, play football, read and watch docuseries and movies. 
+                            In my spare time I like to enjoy the family, play football, read and watch docuseries and movies. 
                             Oh, I also love mexican and chinese food.
                         </p>
                     </section>
@@ -111,11 +112,11 @@
             <!-- Toolbox Section -->
             <section id="toolbox">
                 <!-- Toolbox Main Container -->
-                <div>
+                <div class="w-full max-w-4xl">
                     <!-- Toolbox Title -->
                     <h1 class="text-center font-firaSans font-bold text-3xl md:text-5xl underline underline-offset-[.64rem] md:underline-offset-[.80rem] decoration-desirePink">My Toolbox</h1>
                     <!-- Tools Container -->
-                    <section class="flex items-center flex-col justify-center mt-8 w-full md:max-w-2xl">
+                    <section class="flex items-center flex-col justify-center mt-8 w-full md:max-w-4xl">
                         <!-- Tools Grid  -->
                         <div class="grid grid-cols-1 gap-y-1 sm:grid-cols-2 sm:grid-rows-2 sm:gap-x-8 sm:gap-y-4">
                             <!-- Front-End -->
@@ -258,7 +259,7 @@
     </section>
 
     <!-- Projects Section -->
-    <section id="projects" class="mt-16 mx-auto px-8">
+    <section id="projects" class="mx-auto px-8 h-full py-12">
         <!-- Projects Main Container -->
         <div>
             <!-- Projects Title -->
@@ -266,14 +267,14 @@
             <!-- Projects Container -->
             <section class="flex items-center flex-col mt-10 space-y-10">
                 <!-- Project Sections -->
-                <section class="flex items-center justify-center space-x-6 text-spaceCadet">
+                <!-- <section class="flex items-center justify-center space-x-6 text-spaceCadet">
                     <article id="featured-projects" class="font-firaSans font-bold text-2xl">Featured</article>
                     <article id="personal-projects" class="font-firaSans font-bold text-2xl">Personal</article>
                     <article id="icodethis-projects" class="font-firaSans font-bold text-2xl">ICodeThis</article>
-                </section>
+                </section> -->
                 <!-- Projects Grid -->
-                <section class="grid grid-cols-1 gap-y-3 sm:gap-x-5 sm:grid-cols-2 sm:grid-rows-3 md:grid-cols-3 md:grid-rows-2">
-                    <article class="w-80 rounded shadow-md p-5 transition hover:delay-150 duration-700 ease-in-out hover:scale-105 hover:cursor-pointer">
+                <section id="projects-grid" class="grid grid-cols-1 gap-y-3 sm:gap-x-5 sm:grid-cols-2 sm:grid-rows-3 md:grid-cols-3 md:grid-rows-2">
+                    <!-- <article class="w-80 rounded shadow-lg p-5 transition hover:delay-150 duration-700 ease-in-out hover:scale-105 hover:cursor-pointer">
                         <div class="w-full h-40 overflow-hidden rounded">
                             <img src="src/img/projects/rps.jpg" alt="Rock Paper Scissors" class="object-cover w-full h-40">
                         </div>
@@ -285,6 +286,9 @@
                             <span>html5</span>
                             <span>css3</span>
                             <span>javascript</span>
+                        </section>
+                        <section>
+                            <span class="font-bold text-xs uppercase">Personal</span>
                         </section>
                         <section class="flex items-center space-x-1 mt-2">
                             <a href="#" target="_blank" title="Github">
@@ -303,7 +307,7 @@
                             </a>
                         </section>
                     </article>
-                    <article class="w-80 rounded shadow-md p-5 transition hover:delay-150 duration-700 ease-in-out hover:scale-105 hover:cursor-pointer">
+                    <article class="w-80 rounded shadow-lg p-5 transition hover:delay-150 duration-700 ease-in-out hover:scale-105 hover:cursor-pointer">
                         <div class="w-full h-40 overflow-hidden rounded">
                             <img src="src/img/projects/etch.jpg" alt="Rock Paper Scissors" class="object-cover w-full h-40">
                         </div>
@@ -316,6 +320,7 @@
                             <span>css3</span>
                             <span>javascript</span>
                         </section>
+                        <span class="font-bold text-xs uppercase">Freelance</span>
                         <section class="flex items-center space-x-1 mt-2">
                             <a href="#" target="_blank" title="Github">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="30" height="30" viewBox="0 0 24 24" stroke-width="3" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
@@ -333,7 +338,7 @@
                             </a>
                         </section>
                     </article>
-                    <article class="w-80 rounded shadow-md p-5 transition hover:delay-150 duration-700 ease-in-out hover:scale-105 hover:cursor-pointer">
+                    <article class="w-80 rounded shadow-lg p-5 transition hover:delay-150 duration-700 ease-in-out hover:scale-105 hover:cursor-pointer">
                         <div class="w-full h-40 overflow-hidden rounded">
                             <img src="src/img/projects/personcard.png" alt="Rock Paper Scissors" class="object-cover w-full h-40">
                         </div>
@@ -346,6 +351,7 @@
                             <span>css3</span>
                             <span>javascript</span>
                         </section>
+                        <span class="font-bold text-xs uppercase">ICodeThis</span>
                         <section class="flex items-center space-x-1 mt-2">
                             <a href="#" target="_blank" title="Github">
                                 <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="30" height="30" viewBox="0 0 24 24" stroke-width="3" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
@@ -363,7 +369,7 @@
                             </a>
                         </section>
                     </article>
-                    <article class="w-80 rounded shadow-md p-5 transition hover:delay-150 duration-700 ease-in-out hover:scale-105 hover:cursor-pointer">
+                    <article class="w-80 rounded shadow-lg p-5 transition hover:delay-150 duration-700 ease-in-out hover:scale-105 hover:cursor-pointer">
                         <div class="w-full h-40 overflow-hidden rounded">
                             <img src="src/img/projects/rps.jpg" alt="Rock Paper Scissors" class="object-cover w-full h-40">
                         </div>
@@ -393,7 +399,7 @@
                             </a>
                         </section>
                     </article>
-                    <article class="w-80 rounded shadow-md p-5 transition hover:delay-150 duration-700 ease-in-out hover:scale-105 hover:cursor-pointer">
+                    <article class="w-80 rounded shadow-lg p-5 transition hover:delay-150 duration-700 ease-in-out hover:scale-105 hover:cursor-pointer">
                         <div class="w-full h-40 overflow-hidden rounded">
                             <img src="src/img/projects/rps.jpg" alt="Rock Paper Scissors" class="object-cover w-full h-40">
                         </div>
@@ -423,7 +429,7 @@
                             </a>
                         </section>
                     </article>
-                    <article class="w-80 rounded shadow-md p-5 transition hover:delay-150 duration-700 ease-in-out hover:scale-105 hover:cursor-pointer">
+                    <article class="w-80 rounded shadow-lg p-5 transition hover:delay-150 duration-700 ease-in-out hover:scale-105 hover:cursor-pointer">
                         <div class="w-full h-40 overflow-hidden rounded">
                             <img src="src/img/projects/rps.jpg" alt="Rock Paper Scissors" class="object-cover w-full h-40">
                         </div>
@@ -452,13 +458,13 @@
                                 </svg>
                             </a>
                         </section>
-                    </article>
+                    </article> -->
                 </section>
             </section>
         </div>
     </section>
     <!-- Contact Section -->
-    <section id="contact" class="mx-auto my-16 px-8">
+    <section id="contact" class="mx-auto py-12 px-8 h-full">
         <!-- Contact Main Container -->
         <div>
             <!-- Contact Title -->
