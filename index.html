@@ -98,12 +98,12 @@
                     <!-- About Content -->
                     <section class="mt-8 space-y-3 leading-5 md:leading-1">
                         <p class="text-spaceCadet font-bold text-lg md:text-2xl">
-                            I’m a Web Developer passionate about making people’s life easier through code.
+                            I’m a developer passionate about making people’s life easier through code.
                             I love to approach each task with enthusiasm and attention to detail with the goal of bringing solutions to the table. 
                             At the heart of my work is a desire to constantly learn and grow while staying up-to-date with the latest trends and best practices. 
                         </p>
                         <p class="text-spaceCadet font-bold text-lg md:text-2xl">
-                            In my spare time I like to enjoy the family, play football, read and watch docuseries and movies. 
+                            In my spare time I like to enjoy family, play football, read and watch docuseries and movies. 
                             Oh, I also love mexican and chinese food.
                         </p>
                     </section>
@@ -480,31 +480,31 @@
             <section class="w-full flex items-center justify-center mt-5">
                 <section class="w-full max-w-4xl flex flex-col items-start justify-center space-y-3">
                     <section class="w-full max-w-4xl">
-                        <form action="" class="flex flex-col items-center justify-start space-y-3 space-x-0 md:flex-row md:items-start md:space-x-8 md:space-y-0">
+                        <form action="https://formsubmit.co/0011cbb683481e6cefbda2f541b6b5d4" method="POST" class="flex flex-col items-center justify-start space-y-3 space-x-0 md:flex-row md:items-start md:space-x-8 md:space-y-0">
                             <!-- Text Inputs -->
                             <section class="w-full max-w-4xl space-y-4">
                                 <div>
-                                    <label for="base-input" class="block mb-2 text-xl font-bold font-firaSans">Name</label>
-                                    <input type="text" id="base-input" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-3" placeholder="Full Name">
+                                    <label for="name-input" class="block mb-2 text-xl font-bold font-firaSans">Name</label>
+                                    <input name="name" type="text" id="name-input" class="transition focus:delay-150 duration-500 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-black focus:border-black block w-full p-3" placeholder="Full Name" required>
                                 </div>
                                 <div>
                                     <label for="base-input" class="block mb-2 text-xl font-bold font-firaSans">E-Mail</label>
-                                    <input type="text" id="base-input" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-3" placeholder="E-Mail Address">
+                                    <input name="email" type="email" id="base-input" class="transition focus:delay-150 duration-500 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-3" placeholder="E-Mail Address" required>
                                 </div>
                                 <div>
-                                    <label for="base-input" class="block mb-2 text-xl font-bold font-firaSans">Subject</label>
-                                    <input type="text" id="base-input" class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-3" placeholder="Subject">
+                                    <label for="subject-input" class="block mb-2 text-xl font-bold font-firaSans">Subject</label>
+                                    <input type="text" name="_subject" id="subject-input" class="transition focus:delay-150 duration-500 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-black focus:border-black block w-full p-3" placeholder="Subject" required>
                                 </div>
                             </section>
                             <!-- Textarea -->
                             <section class="w-full max-w-4xl">
                                 <label for="message" class="block mb-2 text-xl font-bold font-firaSans">Message</label>
-                                <textarea id="message" rows="11" class="block p-3 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500" placeholder="What did you have in mind?"></textarea>
+                                <textarea type="text" name="message" id="message" rows="11" class="transition focus:delay-150 duration-500 block p-3 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500" placeholder="What did you have in mind?" required></textarea>
                             </section>
                         </form>
                     </section>
-                    <section class="w-56">
-                        <button type="button" class="w-56 text-white bg-jellyBlue hover:bg-spaceCadet focus:ring-4 focus:ring-blue-300 font-bold font-firaSans rounded-lg px-5 py-2.5 mr-2 mb-2 focus:outline-none">Send Message</button>
+                    <section class="w-48">
+                        <button type="submit" class="w-48 transition hover:delay-150 duration-300 ease-in-out text-white bg-jellyBlue hover:bg-spaceCadet focus:ring-4 focus:ring-blue-300 font-bold font-firaSans rounded-lg px-5 py-2.5 mr-2 mb-2 focus:outline-none">Send Message</button>
                     </section>
                 </section>
             </section>
