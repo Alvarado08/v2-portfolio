@@ -1,18 +1,55 @@
 //DOM Elements
 const projectsGrid = document.querySelector("#projects-grid");
+const navBar = document.querySelector("#nav-bar");
+const menuBtn = document.querySelector("#menu-btn");
+const menuItems = document.querySelector("#menu-items");
 
-//Project Card Constructor
-// function Project(image,title,desc,tools){
-//     this.image = image;
-//     this.title = title;
-//     this.desc = desc;
-//     this.tools = tools;
-// }
+//Responsive menu sections
+let prevScrollPos = window.pageYOffset;
+function updateNavigation(){
+    const sections = document.querySelectorAll(".main-section");
+    const navLinks= document.querySelectorAll("#menu-items a");
+
+    sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.clientHeight;
+        if(window.pageYOffset >= sectionTop - sectionHeight / 2){
+            const sectionId = section.getAttribute("id");
+            // navBar.classList.add("bg-white", "shadow");
+
+            navLinks.forEach(link => {
+                if(link.getAttribute("href") === `#${sectionId}`){
+                    link.classList.add("active");
+                }else{
+                    link.classList.remove("active");
+                }
+            })
+
+        }
+    })
+}
+
+//Mobile Menu
+menuBtn.addEventListener("click", () => {
+    if(menuBtn.classList.contains("menu")){
+        menuBtn.classList.remove("menu");
+        menuBtn.setAttribute("src","src/svg/close.svg");
+        menuItems.classList.remove("opacity-0");
+        menuItems.classList.add("top-[80px]","opacity-100");
+    }else{
+        menuBtn.classList.add("menu");
+        menuBtn.setAttribute("src","src/svg/menu.svg");
+        menuItems.classList.remove("top-[80px]","opacity-100");
+        menuItems.classList.add("opacity-0","top-[-400px]");
+    }
+})
+
+//Theme
 
 //Projects Array
 const projects = [
     {
-        img: "src/img/projects/rps.jpg",
+        img: "src/img/projects/scc.png",
         title: "Complementary Credits System",
         desc: `
             SCC is focused to automate proccesses and reduce time for admins to
@@ -24,7 +61,7 @@ const projects = [
         links: [
             {
                 a: `
-                <a href="#" target="_blank" title="Live"">
+                <a href="http://creditoscomplementarios.valladolid.tecnm.mx" target="_blank" title="Live"">
                 <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-external-link" width="30" height="30" viewBox="0 0 24 24" stroke-width="3" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                     <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
                     <path d="M12 6h-6a2 2 0 0 0 -2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-6"></path>
@@ -37,7 +74,7 @@ const projects = [
         ]
     },
     {
-        img: "src/img/projects/etch.jpg",
+        img: "src/img/projects/rayados.png",
         title: "Rayados Waller",
         desc: `
             Website for non-profit Rayados Waller Academy soccer league. Users can create an account, upload 
@@ -93,7 +130,7 @@ const projects = [
         links: [
             {
                 a: `
-                <a href="#" target="_blank" title="Github">
+                <a href="https://github.com/Alvarado08/person-card-generator" target="_blank" title="Github">
                 <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="30" height="30" viewBox="0 0 24 24" stroke-width="3" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                     <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
                     <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5"></path>
@@ -103,7 +140,7 @@ const projects = [
             },
             {
                 a: `
-                <a href="#" target="_blank" title="Live"">
+                <a href="https://alvarado08.github.io/person-card-generator/" target="_blank" title="Live"">
                 <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-external-link" width="30" height="30" viewBox="0 0 24 24" stroke-width="3" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                     <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
                     <path d="M12 6h-6a2 2 0 0 0 -2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-6"></path>
@@ -116,7 +153,7 @@ const projects = [
         ]
     },
     {
-        img: "src/img/projects/rps.jpg",
+        img: "src/img/projects/lonchi.png",
         title: "Salsas Lonchi",
         desc: `
             PWA that works as a profit manager for a day's sales for a local habanero sauce family business.
@@ -126,7 +163,7 @@ const projects = [
         links: [
             {
                 a: `
-                <a href="#" target="_blank" title="Github">
+                <a href="https://github.com/Alvarado08/salsas-lonchi-ventas" target="_blank" title="Github">
                 <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="30" height="30" viewBox="0 0 24 24" stroke-width="3" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                     <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
                     <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5"></path>
@@ -136,7 +173,7 @@ const projects = [
             },
             {
                 a: `
-                <a href="#" target="_blank" title="Live"">
+                <a href="https://salsas-lonchi-ventas.netlify.app" target="_blank" title="Live"">
                 <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-external-link" width="30" height="30" viewBox="0 0 24 24" stroke-width="3" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                     <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
                     <path d="M12 6h-6a2 2 0 0 0 -2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-6"></path>
@@ -197,28 +234,20 @@ function createCard(project){
 }
 
 function showProjects(){
-    const projectsGrid = document.querySelector("#projects-grid");
     projects.forEach(project => {
-        // const card = createCard(project);
-        // projectsGrid.appendChild(card);
         createCard(project);
     })
 }
 
 showProjects();
+window.addEventListener("scroll", () => {
+    const currentScrollPos = window.pageYOffset;
 
-{/* <a href="#" target="_blank" title="Github">
-                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="30" height="30" viewBox="0 0 24 24" stroke-width="3" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                    <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5"></path>
-                </svg>
-            </a>
-            <a href="#" target="_blank" title="Demo">
-                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-external-link" width="30" height="30" viewBox="0 0 24 24" stroke-width="3" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                    <path d="M12 6h-6a2 2 0 0 0 -2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-6"></path>
-                    <path d="M11 13l9 -9"></path>
-                    <path d="M15 4h5v5"></path>
-                </svg>
-    </a> 
-*/}
+    if(currentScrollPos > 0) {
+        navBar.classList.add("bg-white", "shadow");
+    }else{
+        navBar.classList.remove("bg-white", "shadow");
+    }
+      prevScrollPos = currentScrollPos;
+})
+window.addEventListener("scroll", updateNavigation);

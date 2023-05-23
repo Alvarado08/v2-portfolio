@@ -14,38 +14,48 @@
 </head>
 <body class="relative bg-honeyDew">
     <!-- Navbar -->
-    <nav id="nav-bar" class="sticky top-0 mx-auto py-3 px-8 bg-transparent z-10">
+    <nav id="nav-bar" class="sticky top-0 mx-auto py-3 px-8 z-10">
         <!-- Navbar Flex Container -->
-        <div id="nav-items-container" class="flex items-center justify-between">
-            <!-- Logo -->
-            <img id="logo" class="w-14" src="src/img/FullLogo_Transparent_NoBuffer.png" alt="logo">
-            <div id="menu-items" class="hidden md:flex items-center space-x-5 font-firaSans text-xl">
-                <a class="font-bold" href="#hero">Home</a>
+        <div id="nav-items-container" class="md:flex md:items-center md:justify-between">
+            <!-- Container for mobile view -->
+            <div class="flex items-center justify-between">
+                <!-- Logo -->
+                <img id="logo" class="w-14" src="src/img/FullLogo_Transparent_NoBuffer.png" alt="logo">
+                <!-- Mobile Menu & Theme -->
+                <div class="flex items-center space-x-2">
+                    <!-- <svg xmlns="http://www.w3.org/2000/svg" id="menu-btn" class="block md:hidden icon icon-tabler icon-tabler-menu-2 hover:cursor-pointer" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                        <path id="menu-stroke-1" d="M4 6l16 0"></path>
+                        <path id="menu-stroke-2" d="M4 12l16 0"></path>
+                        <path id="menu-stroke-3" d="M4 18l16 0"></path>
+                    </svg> -->
+                    <img src="src/svg/menu.svg" id="menu-btn" class="menu block md:hidden hover:cursor-pointer" alt="menu-icon" width="24" height="24">
+                    <svg xmlns="http://www.w3.org/2000/svg" id="theme-icon" class="block md:hidden icon icon-tabler icon-tabler-moon hover:cursor-pointer" width="24" height="24" viewBox="0 0 24 24" stroke-width="3" 
+                        stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                        <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z"></path>
+                    </svg>
+                </div>
+            </div>
+            <div id="menu-items" class="md:bg-none flex flex-col md:static absolute left-0 w-full md:w-auto py-2 md:py-0 md:flex-row items-center space-x-0 md:space-x-5 md:space-y-0 space-y-3 z-[-1] md:z-auto md:opacity-100 opacity-0 transition-all ease-in-out delay-100 duration-500 top-[-400px] font-firaSans text-xl">
+                <a class="font-bold active" href="#hero">Home</a>
                 <a class="font-bold" href="#about">About</a>
                 <a class="font-bold" href="#projects">Projects</a>
                 <a class="font-bold" href="#contact">Contact</a>
                 <!-- Theme Icon -->
-                <svg xmlns="http://www.w3.org/2000/svg" id="theme-icon" class="icon icon-tabler icon-tabler-moon hover:cursor-pointer" width="24" height="24" viewBox="0 0 24 24" stroke-width="3" 
+                <svg xmlns="http://www.w3.org/2000/svg" id="theme-icon" class="hidden md:flex icon icon-tabler icon-tabler-moon hover:cursor-pointer" width="24" height="24" viewBox="0 0 24 24" stroke-width="3" 
                     stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                     <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
                     <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z"></path>
                 </svg>
             </div>
-            <!-- Mobile Menu -->
-            <svg xmlns="http://www.w3.org/2000/svg" class="block md:hidden icon icon-tabler icon-tabler-menu-2" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                <path d="M4 6l16 0"></path>
-                <path d="M4 12l16 0"></path>
-                <path d="M4 18l16 0"></path>
-            </svg>
         </div>
     </nav>
     
     <!-- Hero Section -->
-    <section id="hero" class="min-h-screen mx-auto px-8">
-        <!-- Navbar -->
+    <section id="hero" class="main-section h-screen mx-auto px-8">
         <!-- Hero Main Container -->
-        <div class="flex items-center justify-between pt-10">
+        <div class="flex items-center justify-between">
             <!-- Hero Info Container -->
             <div class="flex flex-col items-start justify-start">
                 <h2 class="font-barlow font-bold text-3xl md:text-5xl text-spaceCadet">Hello, I'm</h2>
@@ -86,11 +96,11 @@
     </section>
 
     <!-- About & Toolbox Sections -->
-    <section id="about" class="mx-auto px-8 py-16 h-full">
+    <section id="about" class="main-section mx-auto px-8 py-10 h-screen flex items-center justify-center">
         <!-- About & Toolbox Main Container -->
         <div class="flex flex-col items-center md:items-start md:flex-row md:justify-between md:space-x-8 space-y-6 md:space-y-0">
             <!-- About Section -->
-            <section id="about">
+            <section>
                 <!-- About Main Container -->
                 <div class="w-full md:max-w-2xl">
                     <!-- About Title -->
@@ -103,14 +113,14 @@
                             At the heart of my work is a desire to constantly learn and grow while staying up-to-date with the latest trends and best practices. 
                         </p>
                         <p class="text-spaceCadet font-bold text-lg md:text-2xl">
-                            In my spare time I like to enjoy family, play football, read and watch docuseries and movies. 
+                            In my spare time I like to spend time with family and friends, play football, read and watch docuseries and movies. 
                             Oh, I also love mexican and chinese food.
                         </p>
                     </section>
                 </div>
             </section>
             <!-- Toolbox Section -->
-            <section id="toolbox">
+            <section id="about" class="main-section">
                 <!-- Toolbox Main Container -->
                 <div class="w-full max-w-4xl">
                     <!-- Toolbox Title -->
@@ -259,7 +269,7 @@
     </section>
 
     <!-- Projects Section -->
-    <section id="projects" class="mx-auto px-8 h-full py-12">
+    <section id="projects" class="main-section mx-auto px-8 h-full py-10 flex items-center justify-center">
         <!-- Projects Main Container -->
         <div>
             <!-- Projects Title -->
@@ -273,198 +283,12 @@
                     <article id="icodethis-projects" class="font-firaSans font-bold text-2xl">ICodeThis</article>
                 </section> -->
                 <!-- Projects Grid -->
-                <section id="projects-grid" class="grid grid-cols-1 gap-y-3 sm:gap-x-5 sm:grid-cols-2 sm:grid-rows-3 md:grid-cols-3 md:grid-rows-2">
-                    <!-- <article class="w-80 rounded shadow-lg p-5 transition hover:delay-150 duration-700 ease-in-out hover:scale-105 hover:cursor-pointer">
-                        <div class="w-full h-40 overflow-hidden rounded">
-                            <img src="src/img/projects/rps.jpg" alt="Rock Paper Scissors" class="object-cover w-full h-40">
-                        </div>
-                        <h3 class="font-bold font-firaSans mt-2">Title</h3>
-                        <p class="font-barlow">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, nobis?
-                        </p>
-                        <section class="space-x-2 font-firaSans text-jellyBlue text-sm uppercase mt-2">
-                            <span>html5</span>
-                            <span>css3</span>
-                            <span>javascript</span>
-                        </section>
-                        <section>
-                            <span class="font-bold text-xs uppercase">Personal</span>
-                        </section>
-                        <section class="flex items-center space-x-1 mt-2">
-                            <a href="#" target="_blank" title="Github">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="30" height="30" viewBox="0 0 24 24" stroke-width="3" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                                    <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5"></path>
-                                </svg>
-                            </a>
-                            <a href="#" target="_blank" title="Demo">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-external-link" width="30" height="30" viewBox="0 0 24 24" stroke-width="3" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                                    <path d="M12 6h-6a2 2 0 0 0 -2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-6"></path>
-                                    <path d="M11 13l9 -9"></path>
-                                    <path d="M15 4h5v5"></path>
-                                </svg>
-                            </a>
-                        </section>
-                    </article>
-                    <article class="w-80 rounded shadow-lg p-5 transition hover:delay-150 duration-700 ease-in-out hover:scale-105 hover:cursor-pointer">
-                        <div class="w-full h-40 overflow-hidden rounded">
-                            <img src="src/img/projects/etch.jpg" alt="Rock Paper Scissors" class="object-cover w-full h-40">
-                        </div>
-                        <h3 class="font-bold font-firaSans mt-2">Title</h3>
-                        <p class="font-barlow">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, nobis?
-                        </p>
-                        <section class="space-x-2 font-firaSans text-jellyBlue text-sm uppercase mt-2">
-                            <span>html5</span>
-                            <span>css3</span>
-                            <span>javascript</span>
-                        </section>
-                        <span class="font-bold text-xs uppercase">Freelance</span>
-                        <section class="flex items-center space-x-1 mt-2">
-                            <a href="#" target="_blank" title="Github">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="30" height="30" viewBox="0 0 24 24" stroke-width="3" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                                    <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5"></path>
-                                </svg>
-                            </a>
-                            <a href="#" target="_blank" title="Demo">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-external-link" width="30" height="30" viewBox="0 0 24 24" stroke-width="3" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                                    <path d="M12 6h-6a2 2 0 0 0 -2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-6"></path>
-                                    <path d="M11 13l9 -9"></path>
-                                    <path d="M15 4h5v5"></path>
-                                </svg>
-                            </a>
-                        </section>
-                    </article>
-                    <article class="w-80 rounded shadow-lg p-5 transition hover:delay-150 duration-700 ease-in-out hover:scale-105 hover:cursor-pointer">
-                        <div class="w-full h-40 overflow-hidden rounded">
-                            <img src="src/img/projects/personcard.png" alt="Rock Paper Scissors" class="object-cover w-full h-40">
-                        </div>
-                        <h3 class="font-bold font-firaSans mt-2">Title</h3>
-                        <p class="font-barlow">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, nobis?
-                        </p>
-                        <section class="space-x-2 font-firaSans text-jellyBlue text-sm uppercase mt-2">
-                            <span>html5</span>
-                            <span>css3</span>
-                            <span>javascript</span>
-                        </section>
-                        <span class="font-bold text-xs uppercase">ICodeThis</span>
-                        <section class="flex items-center space-x-1 mt-2">
-                            <a href="#" target="_blank" title="Github">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="30" height="30" viewBox="0 0 24 24" stroke-width="3" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                                    <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5"></path>
-                                </svg>
-                            </a>
-                            <a href="#" target="_blank" title="Demo">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-external-link" width="30" height="30" viewBox="0 0 24 24" stroke-width="3" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                                    <path d="M12 6h-6a2 2 0 0 0 -2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-6"></path>
-                                    <path d="M11 13l9 -9"></path>
-                                    <path d="M15 4h5v5"></path>
-                                </svg>
-                            </a>
-                        </section>
-                    </article>
-                    <article class="w-80 rounded shadow-lg p-5 transition hover:delay-150 duration-700 ease-in-out hover:scale-105 hover:cursor-pointer">
-                        <div class="w-full h-40 overflow-hidden rounded">
-                            <img src="src/img/projects/rps.jpg" alt="Rock Paper Scissors" class="object-cover w-full h-40">
-                        </div>
-                        <h3 class="font-bold font-firaSans mt-2">Title</h3>
-                        <p class="font-barlow">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, nobis?
-                        </p>
-                        <section class="space-x-2 font-firaSans text-jellyBlue text-sm uppercase mt-2">
-                            <span>html5</span>
-                            <span>css3</span>
-                            <span>javascript</span>
-                        </section>
-                        <section class="flex items-center space-x-1 mt-2">
-                            <a href="#" target="_blank" title="Github">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="30" height="30" viewBox="0 0 24 24" stroke-width="3" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                                    <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5"></path>
-                                </svg>
-                            </a>
-                            <a href="#" target="_blank" title="Demo">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-external-link" width="30" height="30" viewBox="0 0 24 24" stroke-width="3" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                                    <path d="M12 6h-6a2 2 0 0 0 -2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-6"></path>
-                                    <path d="M11 13l9 -9"></path>
-                                    <path d="M15 4h5v5"></path>
-                                </svg>
-                            </a>
-                        </section>
-                    </article>
-                    <article class="w-80 rounded shadow-lg p-5 transition hover:delay-150 duration-700 ease-in-out hover:scale-105 hover:cursor-pointer">
-                        <div class="w-full h-40 overflow-hidden rounded">
-                            <img src="src/img/projects/rps.jpg" alt="Rock Paper Scissors" class="object-cover w-full h-40">
-                        </div>
-                        <h3 class="font-bold font-firaSans mt-2">Title</h3>
-                        <p class="font-barlow">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, nobis?
-                        </p>
-                        <section class="space-x-2 font-firaSans text-jellyBlue text-sm uppercase mt-2">
-                            <span>html5</span>
-                            <span>css3</span>
-                            <span>javascript</span>
-                        </section>
-                        <section class="flex items-center space-x-1 mt-2">
-                            <a href="#" target="_blank" title="Github">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="30" height="30" viewBox="0 0 24 24" stroke-width="3" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                                    <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5"></path>
-                                </svg>
-                            </a>
-                            <a href="#" target="_blank" title="Demo">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-external-link" width="30" height="30" viewBox="0 0 24 24" stroke-width="3" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                                    <path d="M12 6h-6a2 2 0 0 0 -2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-6"></path>
-                                    <path d="M11 13l9 -9"></path>
-                                    <path d="M15 4h5v5"></path>
-                                </svg>
-                            </a>
-                        </section>
-                    </article>
-                    <article class="w-80 rounded shadow-lg p-5 transition hover:delay-150 duration-700 ease-in-out hover:scale-105 hover:cursor-pointer">
-                        <div class="w-full h-40 overflow-hidden rounded">
-                            <img src="src/img/projects/rps.jpg" alt="Rock Paper Scissors" class="object-cover w-full h-40">
-                        </div>
-                        <h3 class="font-bold font-firaSans mt-2">Title</h3>
-                        <p class="font-barlow">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, nobis?
-                        </p>
-                        <section class="space-x-2 font-firaSans text-jellyBlue text-sm uppercase mt-2">
-                            <span>html5</span>
-                            <span>css3</span>
-                            <span>javascript</span>
-                        </section>
-                        <section class="flex items-center space-x-1 mt-2">
-                            <a href="#" target="_blank" title="Github">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="30" height="30" viewBox="0 0 24 24" stroke-width="3" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                                    <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5"></path>
-                                </svg>
-                            </a>
-                            <a href="#" target="_blank" title="Demo">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-external-link" width="30" height="30" viewBox="0 0 24 24" stroke-width="3" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                                    <path d="M12 6h-6a2 2 0 0 0 -2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-6"></path>
-                                    <path d="M11 13l9 -9"></path>
-                                    <path d="M15 4h5v5"></path>
-                                </svg>
-                            </a>
-                        </section>
-                    </article> -->
-                </section>
+                <section id="projects-grid" class="grid grid-cols-1 gap-y-3 sm:gap-x-5 sm:grid-cols-2 sm:grid-rows-3 md:grid-cols-3 md:grid-rows-2"></section>
             </section>
         </div>
     </section>
     <!-- Contact Section -->
-    <section id="contact" class="mx-auto py-12 px-8 h-full">
+    <section id="contact" class="main-section mx-auto py-12 px-8 h-full">
         <!-- Contact Main Container -->
         <div>
             <!-- Contact Title -->
@@ -480,7 +304,7 @@
             <section class="w-full flex items-center justify-center mt-5">
                 <section class="w-full max-w-4xl flex flex-col items-start justify-center space-y-3">
                     <section class="w-full max-w-4xl">
-                        <form action="https://formsubmit.co/0011cbb683481e6cefbda2f541b6b5d4" method="POST" class="flex flex-col items-center justify-start space-y-3 space-x-0 md:flex-row md:items-start md:space-x-8 md:space-y-0">
+                        <form id="contact-form" action="https://formsubmit.co/0011cbb683481e6cefbda2f541b6b5d4" method="POST" class="flex flex-col items-center justify-start space-y-3 space-x-0 md:flex-row md:items-start md:space-x-8 md:space-y-0">
                             <!-- Text Inputs -->
                             <section class="w-full max-w-4xl space-y-4">
                                 <div>
@@ -503,8 +327,8 @@
                             </section>
                         </form>
                     </section>
-                    <section class="w-48">
-                        <button type="submit" class="w-48 transition hover:delay-150 duration-300 ease-in-out text-white bg-jellyBlue hover:bg-spaceCadet focus:ring-4 focus:ring-blue-300 font-bold font-firaSans rounded-lg px-5 py-2.5 mr-2 mb-2 focus:outline-none">Send Message</button>
+                    <section class="w-40">
+                        <button form="contact-form" type="submit" class="w-40 transition hover:delay-150 duration-300 ease-in-out text-white bg-jellyBlue hover:bg-spaceCadet focus:ring-4 focus:ring-blue-300 font-bold font-firaSans rounded-lg px-5 py-2.5 mr-2 mb-2 focus:outline-none">Send Message</button>
                     </section>
                 </section>
             </section>
@@ -540,5 +364,23 @@
             </a>
         </section>
     </footer>
+    <!-- <script>
+        $.ajax({
+            method: 'POST',
+            url: 'https://formsubmit.co/ajax/your@email.com',
+            dataType: 'json',
+            accepts: 'application/json',
+            data: {
+                name: "FormSubmit",
+                message: "Thanks for your message!"
+            },
+            error: {
+                message: "Oops. Something went wrong!"
+            },
+
+        success: (data) => alert(data),
+        error: (err) => alert(err)
+    });
+    </script> -->
 </body>
 </html>
