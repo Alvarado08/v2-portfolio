@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;600;700&family=Fira+Sans:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="dist/main.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js" defer></script>
     <script src="src/app.js" defer></script>
     <title>Jorge Alvarado</title>
 </head>
@@ -38,12 +39,12 @@
                 </div>
             </div>
             <div id="menu-items" class="md:bg-none flex flex-col md:static absolute left-0 w-full md:w-auto py-2 md:py-0 md:flex-row items-center space-x-0 md:space-x-5 md:space-y-0 space-y-3 z-[-1] md:z-auto md:opacity-100 opacity-0 transition-all ease-in-out delay-100 duration-500 top-[-400px] font-firaSans text-xl">
-                <a class="font-bold active" href="#hero">Home</a>
-                <a class="font-bold" href="#about">About</a>
-                <a class="font-bold" href="#projects">Projects</a>
-                <a class="font-bold" href="#contact">Contact</a>
+                <a class="items font-bold active" href="#hero">Home</a>
+                <a class="items font-bold" href="#about">About</a>
+                <a class="items font-bold" href="#projects">Projects</a>
+                <a class="items font-bold" href="#contact">Contact</a>
                 <!-- Theme Icon -->
-                <svg xmlns="http://www.w3.org/2000/svg" id="theme-icon" class="hidden md:flex icon icon-tabler icon-tabler-moon hover:cursor-pointer" width="24" height="24" viewBox="0 0 24 24" stroke-width="3" 
+                <svg xmlns="http://www.w3.org/2000/svg" id="theme-icon" class="items hidden md:flex icon icon-tabler icon-tabler-moon hover:cursor-pointer" width="24" height="24" viewBox="0 0 24 24" stroke-width="3" 
                     stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                     <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
                     <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z"></path>
@@ -53,18 +54,18 @@
     </nav>
     
     <!-- Hero Section -->
-    <section id="hero" class="main-section h-screen mx-auto px-8">
+    <section id="hero" class="py-8 main-section min-h-screen mx-auto px-8">
         <!-- Hero Main Container -->
         <div class="flex items-center justify-between">
             <!-- Hero Info Container -->
-            <div class="flex flex-col items-start justify-start">
-                <h2 class="font-barlow font-bold text-3xl md:text-5xl text-spaceCadet">Hello, I'm</h2>
-                <h1 class="font-firaSans font-bold text-4xl md:text-6xl underline underline-offset-[.64rem] md:underline-offset-[.85rem] decoration-desirePink">Jorge Alvarado</h1>
-                <p class="w-full max-w-xl text-spaceCadet font-bold text-lg md:text-3xl leading-5 md:leading-none mt-2 md:mt-4">
+            <div id="hero-info" class="flex flex-col items-start justify-start">
+                <h2 id="hero-info" class="font-barlow font-bold text-3xl md:text-5xl text-spaceCadet">Hello, I'm</h2>
+                <h1 id="hero-info" class="font-firaSans font-bold text-4xl md:text-6xl underline underline-offset-[.64rem] md:underline-offset-[.85rem] decoration-desirePink">Jorge Alvarado</h1>
+                <p  id="hero-info" class="w-full max-w-xl text-spaceCadet font-bold text-lg md:text-3xl leading-5 md:leading-none mt-2 md:mt-4">
                     Web Developer passionate about technology,
                     seeking new challenges and bringing ideas to life
                 </p>
-                <div class="flex items-center space-x-3 mt-2">
+                <div id="hero-info" class="flex items-center space-x-3 mt-2">
                     <a href="https://github.com/Alvarado08" target="_blank" title="Github">
                         <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="40" height="40" viewBox="0 0 24 24" stroke-width="3" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                             <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
@@ -90,15 +91,15 @@
                 </div>
             </div>
             <div class="aspect-w-16 aspect-h-9">
-                <img class="w-full" src="src/img/headshot.png" alt="headshot">
+                <img id="headshot" class="w-full" src="src/img/headshot.png" alt="headshot">
             </div>
         </div>
     </section>
 
     <!-- About & Toolbox Sections -->
-    <section id="about" class="main-section mx-auto px-8 py-10 h-screen flex items-center justify-center">
+    <section id="about" class="main-section mx-auto px-8 py-10 min-h-screen md:flex md:items-center md:justify-center">
         <!-- About & Toolbox Main Container -->
-        <div class="flex flex-col items-center md:items-start md:flex-row md:justify-between md:space-x-8 space-y-6 md:space-y-0">
+        <div class="flex flex-col items-center md:items-start md:flex-row md:justify-between py-10 md:space-x-8 space-y-6 md:space-y-0">
             <!-- About Section -->
             <section>
                 <!-- About Main Container -->
@@ -122,11 +123,11 @@
             <!-- Toolbox Section -->
             <section id="about" class="main-section">
                 <!-- Toolbox Main Container -->
-                <div class="w-full max-w-4xl">
+                <div class="w-full md:max-w-4xl">
                     <!-- Toolbox Title -->
                     <h1 class="text-center font-firaSans font-bold text-3xl md:text-5xl underline underline-offset-[.64rem] md:underline-offset-[.80rem] decoration-desirePink">My Toolbox</h1>
                     <!-- Tools Container -->
-                    <section class="flex items-center flex-col justify-center mt-8 w-full md:max-w-4xl">
+                    <section class="flex items-center flex-col justify-center my-8 w-full md:max-w-4xl">
                         <!-- Tools Grid  -->
                         <div class="grid grid-cols-1 gap-y-1 sm:grid-cols-2 sm:grid-rows-2 sm:gap-x-8 sm:gap-y-4">
                             <!-- Front-End -->
@@ -269,7 +270,7 @@
     </section>
 
     <!-- Projects Section -->
-    <section id="projects" class="main-section mx-auto px-8 h-full py-10 flex items-center justify-center">
+    <section id="projects" class="main-section mx-auto px-8 min-h-screen py-14 flex items-center justify-center">
         <!-- Projects Main Container -->
         <div>
             <!-- Projects Title -->
@@ -288,7 +289,7 @@
         </div>
     </section>
     <!-- Contact Section -->
-    <section id="contact" class="main-section mx-auto py-12 px-8 h-full">
+    <section id="contact" class="main-section mx-auto py-16 md:py-5 px-8 h-full">
         <!-- Contact Main Container -->
         <div>
             <!-- Contact Title -->

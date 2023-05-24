@@ -567,6 +567,11 @@ video {
   margin-right: auto;
 }
 
+.my-8 {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
 .mb-2 {
   margin-bottom: 0.5rem;
 }
@@ -593,6 +598,10 @@ video {
 
 .block {
   display: block;
+}
+
+.inline {
+  display: inline;
 }
 
 .flex {
@@ -627,8 +636,8 @@ video {
   height: 100%;
 }
 
-.h-screen {
-  height: 100vh;
+.min-h-screen {
+  min-height: 100vh;
 }
 
 .w-14 {
@@ -639,20 +648,12 @@ video {
   width: 4rem;
 }
 
-.w-48 {
-  width: 12rem;
+.w-40 {
+  width: 10rem;
 }
 
 .w-full {
   width: 100%;
-}
-
-.w-44 {
-  width: 11rem;
-}
-
-.w-40 {
-  width: 10rem;
 }
 
 .max-w-4xl {
@@ -819,10 +820,6 @@ video {
   background-color: rgb(255 255 255 / var(--tw-bg-opacity));
 }
 
-.bg-transparent {
-  background-color: transparent;
-}
-
 .object-cover {
   -o-object-fit: cover;
      object-fit: cover;
@@ -851,9 +848,14 @@ video {
   padding-bottom: 2.5rem;
 }
 
-.py-12 {
-  padding-top: 3rem;
-  padding-bottom: 3rem;
+.py-14 {
+  padding-top: 3.5rem;
+  padding-bottom: 3.5rem;
+}
+
+.py-16 {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
 }
 
 .py-2 {
@@ -869,6 +871,11 @@ video {
 .py-3 {
   padding-top: 0.75rem;
   padding-bottom: 0.75rem;
+}
+
+.py-8 {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
 }
 
 .text-center {
@@ -1054,6 +1061,13 @@ section {
   vertical-align: middle;
 }
 
+.notactive {
+  position: relative;
+  text-decoration: none;
+  transition: background-color 10s ease;
+  vertical-align: middle;
+}
+
 .active::after {
   content: "";
   position: absolute;
@@ -1067,6 +1081,25 @@ section {
   /* Adjust the color of the underline */
   transition: width 0.3s ease;
   /* Add transition for width property */
+}
+
+.notactive::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0%;
+  /* Adjust the width of the underline */
+  height: 2.9px;
+  background-color: #E63946;
+  /* Adjust the color of the underline */
+  transition: width 0.3s ease;
+  /* Add transition for width property */
+}
+
+.notactive:hover::after {
+  width: 40% !important;
 }
 
 .hover\:scale-105:hover {
@@ -1209,6 +1242,10 @@ section {
     align-items: center;
   }
 
+  .md\:justify-center {
+    justify-content: center;
+  }
+
   .md\:justify-between {
     justify-content: space-between;
   }
@@ -1231,10 +1268,6 @@ section {
     margin-bottom: calc(0px * var(--tw-space-y-reverse));
   }
 
-  .md\:bg-transparent {
-    background-color: transparent;
-  }
-
   .md\:bg-none {
     background-image: none;
   }
@@ -1242,6 +1275,11 @@ section {
   .md\:py-0 {
     padding-top: 0px;
     padding-bottom: 0px;
+  }
+
+  .md\:py-5 {
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
   }
 
   .md\:text-2xl {

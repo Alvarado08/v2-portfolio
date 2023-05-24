@@ -26,6 +26,13 @@ section {
     vertical-align: middle;
 }
 
+.notactive {
+    position: relative;
+    text-decoration: none;
+    transition: background-color 10s ease;
+    vertical-align: middle;
+}
+
 .active::after {
     content: "";
     position: absolute;
@@ -36,4 +43,20 @@ section {
     height: 2.9px;
     background-color: #E63946; /* Adjust the color of the underline */
     transition: width 0.3s ease; /* Add transition for width property */
+}
+
+.notactive::after {
+    content: "";
+    position: absolute;
+    bottom: -4px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0%; /* Adjust the width of the underline */
+    height: 2.9px;
+    background-color: #E63946; /* Adjust the color of the underline */
+    transition: width 0.3s ease; /* Add transition for width property */
+}
+
+.notactive:hover::after {
+    width: 40% !important;
 }

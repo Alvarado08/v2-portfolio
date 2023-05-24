@@ -4,11 +4,17 @@ const navBar = document.querySelector("#nav-bar");
 const menuBtn = document.querySelector("#menu-btn");
 const menuItems = document.querySelector("#menu-items");
 
+//Animations
+const timeline = gsap.timeline({defaults: {duration: 2}});
+timeline.from("#logo", {opacity: 0})
+    .from("#hero-info",{opacity: 0, stagger: .5}, 1)
+    .from("#headshot",{x: "100vw", ease: "sine.out"}, "<1.5")        
+
 //Responsive menu sections
 let prevScrollPos = window.pageYOffset;
 function updateNavigation(){
     const sections = document.querySelectorAll(".main-section");
-    const navLinks= document.querySelectorAll("#menu-items a");
+    const navLinks = document.querySelectorAll("#menu-items a");
 
     sections.forEach(section => {
         const sectionTop = section.offsetTop;
@@ -20,11 +26,21 @@ function updateNavigation(){
             navLinks.forEach(link => {
                 if(link.getAttribute("href") === `#${sectionId}`){
                     link.classList.add("active");
+                    link.classList.remove("notactive");
                 }else{
                     link.classList.remove("active");
+                    link.classList.add("notactive");
                 }
             })
 
+            // Scroll to the top when clicking on the home link
+            if (sectionId === "hero") {
+            const homeLink = document.querySelector('a[href="#hero"]');
+            homeLink.addEventListener('click', function(event) {
+            event.preventDefault();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+          }
         }
     })
 }
@@ -242,12 +258,18 @@ function showProjects(){
 showProjects();
 window.addEventListener("scroll", () => {
     const currentScrollPos = window.pageYOffset;
+    const viewPort = window.innerWidth;
 
     if(currentScrollPos > 0) {
         navBar.classList.add("bg-white", "shadow");
+        if(viewPort <= 767){
+            menuItems.classList.add("bg-white");
+        }
     }else{
         navBar.classList.remove("bg-white", "shadow");
+        menuItems.classList.remove("bg-white");
     }
       prevScrollPos = currentScrollPos;
 })
+
 window.addEventListener("scroll", updateNavigation);
