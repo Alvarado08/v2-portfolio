@@ -31,24 +31,26 @@
                         <path id="menu-stroke-3" d="M4 18l16 0"></path>
                     </svg> -->
                     <img src="src/svg/menu.svg" id="menu-btn" class="menu block md:hidden hover:cursor-pointer" alt="menu-icon" width="24" height="24">
-                    <svg xmlns="http://www.w3.org/2000/svg" id="theme-icon" class="block md:hidden icon icon-tabler icon-tabler-moon hover:cursor-pointer" width="24" height="24" viewBox="0 0 24 24" stroke-width="3" 
+                    <img src="src/svg/moon.svg" id="theme-icon" class="block md:hidden icon icon-tabler icon-tabler-moon hover:cursor-pointer" alt="theme-icon" width="24" height="24">
+                    <!-- <svg xmlns="http://www.w3.org/2000/svg" id="theme-icon" class="block md:hidden icon icon-tabler icon-tabler-moon hover:cursor-pointer" width="24" height="24" viewBox="0 0 24 24" stroke-width="3" 
                         stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                         <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
                         <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z"></path>
-                    </svg>
+                    </svg> -->
                 </div>
             </div>
-            <div id="menu-items" class="md:bg-none flex flex-col md:static absolute left-0 w-full md:w-auto py-2 md:py-0 md:flex-row items-center space-x-0 md:space-x-5 md:space-y-0 space-y-3 z-[-1] md:z-auto md:opacity-100 opacity-0 transition-all ease-in-out delay-100 duration-500 top-[-400px] font-firaSans text-xl">
-                <a class="items font-bold active" href="#hero">Home</a>
-                <a class="items font-bold" href="#about">About</a>
-                <a class="items font-bold" href="#projects">Projects</a>
-                <a class="items font-bold" href="#contact">Contact</a>
+            <div id="menu-items" class="md:bg-none flex flex-col md:static absolute left-0 w-full md:w-auto pt-2 pb-3 md:pt-0 md:pb-0 md:flex-row items-center space-x-0 md:space-x-5 md:space-y-0 space-y-3 z-[-1] md:z-auto md:opacity-100 opacity-0 transition-all ease-in-out delay-100 duration-500 top-[-400px] font-firaSans text-xl">
+                <a class="items honey font-bold active" href="#hero">Home</a>
+                <a class="items honey font-bold notactive" href="#about">About</a>
+                <a class="items honey font-bold notactive" href="#projects">Projects</a>
+                <a class="items honey font-bold notactive" href="#contact">Contact</a>
                 <!-- Theme Icon -->
-                <svg xmlns="http://www.w3.org/2000/svg" id="theme-icon" class="items hidden md:flex icon icon-tabler icon-tabler-moon hover:cursor-pointer" width="24" height="24" viewBox="0 0 24 24" stroke-width="3" 
+                <img src="src/svg/moon.svg" id="theme-icon" class="items hidden md:flex icon icon-tabler icon-tabler-moon hover:cursor-pointer" alt="theme-icon" width="24" height="24">
+                <!-- <svg xmlns="http://www.w3.org/2000/svg" id="theme-icon" class="items hidden md:flex icon icon-tabler icon-tabler-moon hover:cursor-pointer" width="24" height="24" viewBox="0 0 24 24" stroke-width="3" 
                     stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                     <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
                     <path d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z"></path>
-                </svg>
+                </svg> -->
             </div>
         </div>
     </nav>
@@ -56,24 +58,24 @@
     <!-- Hero Section -->
     <section id="hero" class="py-8 main-section min-h-screen mx-auto px-8">
         <!-- Hero Main Container -->
-        <div class="flex items-center justify-between">
+        <div class="flex flex-col sm:flex-row items-center justify-between">
             <!-- Hero Info Container -->
             <div id="hero-info" class="flex flex-col items-start justify-start">
-                <h2 id="hero-info" class="font-barlow font-bold text-3xl md:text-5xl text-spaceCadet">Hello, I'm</h2>
-                <h1 id="hero-info" class="font-firaSans font-bold text-4xl md:text-6xl underline underline-offset-[.64rem] md:underline-offset-[.85rem] decoration-desirePink">Jorge Alvarado</h1>
-                <p  id="hero-info" class="w-full max-w-xl text-spaceCadet font-bold text-lg md:text-3xl leading-5 md:leading-none mt-2 md:mt-4">
+                <h2 id="hero-info" class="hello font-barlow font-bold text-3xl sm:text-4xl md:text-5xl text-spaceCadet">Hello, I'm</h2>
+                <h1 id="hero-info" class="honey jelly-decoration font-firaSans font-bold text-4xl sm:text-5xl md:text-6xl underline underline-offset-[.58rem] sm:underline-offset-[.67rem] md:underline-offset-[.85rem] decoration-desirePink">Jorge Alvarado</h1>
+                <p  id="hero-info" class="desc w-full max-w-xl text-spaceCadet font-bold text-lg sm:text-2xl md:text-3xl leading-4 md:leading-none mt-2 md:mt-4">
                     Web Developer passionate about technology,
                     seeking new challenges and bringing ideas to life
                 </p>
                 <div id="hero-info" class="flex items-center space-x-3 mt-2">
                     <a href="https://github.com/Alvarado08" target="_blank" title="Github">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="40" height="40" viewBox="0 0 24 24" stroke-width="3" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="hero-social icon icon-tabler icon-tabler-brand-github" width="40" height="40" viewBox="0 0 24 24" stroke-width="3" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                             <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
                             <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5"></path>
                         </svg>
                     </a>
                     <a href="https://www.icodethis.com/jalva08" target="_blank" title="iCodeThis">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-device-desktop-code" width="40" height="40" viewBox="0 0 24 24" stroke-width="3" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="hero-social icon icon-tabler icon-tabler-device-desktop-code" width="40" height="40" viewBox="0 0 24 24" stroke-width="3" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                             <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
                             <path d="M12.5 16h-8.5a1 1 0 0 1 -1 -1v-10a1 1 0 0 1 1 -1h16a1 1 0 0 1 1 1v8"></path>
                             <path d="M7 20h4"></path>
@@ -83,7 +85,7 @@
                         </svg>
                     </a>
                     <a href="https://twitter.com/jalva08" target="_blank" title="Twitter">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-twitter" width="40" height="40" viewBox="0 0 24 24" stroke-width="3" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="hero-social icon icon-tabler icon-tabler-brand-twitter" width="40" height="40" viewBox="0 0 24 24" stroke-width="3" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                             <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
                             <path d="M22 4.01c-1 .49 -1.98 .689 -3 .99c-1.121 -1.265 -2.783 -1.335 -4.38 -.737s-2.643 2.06 -2.62 3.737v1c-3.245 .083 -6.135 -1.395 -8 -4c0 0 -4.182 7.433 4 11c-1.872 1.247 -3.739 2.088 -6 2c3.308 1.803 6.913 2.423 10.034 1.517c3.58 -1.04 6.522 -3.723 7.651 -7.742a13.84 13.84 0 0 0 .497 -3.753c0 -.249 1.51 -2.772 1.818 -4.013z"></path>
                         </svg>
@@ -97,7 +99,7 @@
     </section>
 
     <!-- About & Toolbox Sections -->
-    <section id="about" class="main-section mx-auto px-8 py-10 min-h-screen md:flex md:items-center md:justify-center">
+    <section id="about" class="main-section mx-auto px-8 pt-[6rem] pb-[5rem] min-h-screen md:flex md:items-center md:justify-center">
         <!-- About & Toolbox Main Container -->
         <div class="flex flex-col items-center md:items-start md:flex-row md:justify-between py-10 md:space-x-8 space-y-6 md:space-y-0">
             <!-- About Section -->
@@ -105,15 +107,15 @@
                 <!-- About Main Container -->
                 <div class="w-full md:max-w-2xl">
                     <!-- About Title -->
-                    <h1 class="text-center font-firaSans font-bold text-3xl md:text-5xl underline underline-offset-[.64rem] md:underline-offset-[.75rem] decoration-desirePink">About Me</h1>
+                    <h1 class="honey jelly-decoration text-center font-firaSans font-bold text-3xl md:text-5xl underline underline-offset-[.64rem] md:underline-offset-[.75rem] decoration-desirePink">About Me</h1>
                     <!-- About Content -->
                     <section class="mt-8 space-y-3 leading-5 md:leading-1">
-                        <p class="text-spaceCadet font-bold text-lg md:text-2xl">
+                        <p class="desc text-spaceCadet font-bold text-lg md:text-2xl">
                             I’m a developer passionate about making people’s life easier through code.
                             I love to approach each task with enthusiasm and attention to detail with the goal of bringing solutions to the table. 
                             At the heart of my work is a desire to constantly learn and grow while staying up-to-date with the latest trends and best practices. 
                         </p>
-                        <p class="text-spaceCadet font-bold text-lg md:text-2xl">
+                        <p class="desc text-spaceCadet font-bold text-lg md:text-2xl">
                             In my spare time I like to spend time with family and friends, play football, read and watch docuseries and movies. 
                             Oh, I also love mexican and chinese food.
                         </p>
@@ -121,11 +123,11 @@
                 </div>
             </section>
             <!-- Toolbox Section -->
-            <section id="about" class="main-section">
+            <section>
                 <!-- Toolbox Main Container -->
                 <div class="w-full md:max-w-4xl">
                     <!-- Toolbox Title -->
-                    <h1 class="text-center font-firaSans font-bold text-3xl md:text-5xl underline underline-offset-[.64rem] md:underline-offset-[.80rem] decoration-desirePink">My Toolbox</h1>
+                    <h1 class="honey jelly-decoration text-center font-firaSans font-bold text-3xl md:text-5xl underline underline-offset-[.64rem] md:underline-offset-[.80rem] decoration-desirePink">My Toolbox</h1>
                     <!-- Tools Container -->
                     <section class="flex items-center flex-col justify-center my-8 w-full md:max-w-4xl">
                         <!-- Tools Grid  -->
@@ -133,56 +135,56 @@
                             <!-- Front-End -->
                             <div>
                                 <section class="grid grid-cols-2 grid-rows-4">
-                                    <h2 class="font-firaSans text-spaceCadet font-bold text-2xl col-span-2 text-center">Front-End</h2>
+                                    <h2 class="desc font-firaSans text-spaceCadet font-bold text-2xl col-span-2 text-center">Front-End</h2>
                                     <article>
                                         <div class="flex items-center space-x-1">
-                                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-html5" width="48" height="48" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="tool-icon icon icon-tabler icon-tabler-brand-html5" width="48" height="48" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                                                 <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
                                                 <path d="M20 4l-2 14.5l-6 2l-6 -2l-2 -14.5z"></path>
                                                 <path d="M15.5 8h-7l.5 4h6l-.5 3.5l-2.5 .75l-2.5 -.75l-.1 -.5"></path>
                                             </svg>
-                                            <span class="font-barlow text-jellyBlue font-bold text-lg">HTML5</span>
+                                            <span class="jelly font-barlow text-jellyBlue font-bold text-lg">HTML5</span>
                                         </div>
                                     </article>
                                     <article>
                                         <div class="flex items-center space-x-1">
-                                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-css3" width="48" height="48" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="tool-icon icon icon-tabler icon-tabler-brand-css3" width="48" height="48" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                                                 <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
                                                 <path d="M20 4l-2 14.5l-6 2l-6 -2l-2 -14.5z"></path>
                                                 <path d="M8.5 8h7l-4.5 4h4l-.5 3.5l-2.5 .75l-2.5 -.75l-.1 -.5"></path>
                                             </svg>
-                                            <span class="font-barlow text-jellyBlue font-bold text-lg">CSS3</span>
+                                            <span class="jelly font-barlow text-jellyBlue font-bold text-lg">CSS3</span>
                                         </div>
                                     </article>
                                     <article>
                                         <div class="flex items-center space-x-1">
-                                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-tailwind" width="48" height="48" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="tool-icon icon icon-tabler icon-tabler-brand-tailwind" width="48" height="48" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                                                 <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
                                                 <path d="M11.667 6c-2.49 0 -4.044 1.222 -4.667 3.667c.933 -1.223 2.023 -1.68 3.267 -1.375c.71 .174 1.217 .68 1.778 1.24c.916 .912 2 1.968 4.288 1.968c2.49 0 4.044 -1.222 4.667 -3.667c-.933 1.223 -2.023 1.68 -3.267 1.375c-.71 -.174 -1.217 -.68 -1.778 -1.24c-.916 -.912 -1.975 -1.968 -4.288 -1.968zm-4 6.5c-2.49 0 -4.044 1.222 -4.667 3.667c.933 -1.223 2.023 -1.68 3.267 -1.375c.71 .174 1.217 .68 1.778 1.24c.916 .912 1.975 1.968 4.288 1.968c2.49 0 4.044 -1.222 4.667 -3.667c-.933 1.223 -2.023 1.68 -3.267 1.375c-.71 -.174 -1.217 -.68 -1.778 -1.24c-.916 -.912 -1.975 -1.968 -4.288 -1.968z"></path>
                                             </svg>
-                                            <span class="font-barlow text-jellyBlue font-bold text-lg">Tailwind</span>
+                                            <span class="jelly font-barlow text-jellyBlue font-bold text-lg">Tailwind</span>
                                         </div>
                                     </article>
                                     <article>
                                         <div class="flex items-center space-x-1">
-                                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-bootstrap" width="48" height="48" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="tool-icon icon icon-tabler icon-tabler-brand-bootstrap" width="48" height="48" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                                                 <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
                                                 <path d="M2 12a2 2 0 0 0 2 -2v-4a2 2 0 0 1 2 -2h12a2 2 0 0 1 2 2v4a2 2 0 0 0 2 2"></path>
                                                 <path d="M2 12a2 2 0 0 1 2 2v4a2 2 0 0 0 2 2h12a2 2 0 0 0 2 -2v-4a2 2 0 0 1 2 -2"></path>
                                                 <path d="M9 16v-8h3.5a2 2 0 1 1 0 4h-3.5h4a2 2 0 1 1 0 4h-4z"></path>
                                             </svg>
-                                            <span class="font-barlow text-jellyBlue font-bold text-lg">Bootstrap</span>
+                                            <span class="jelly font-barlow text-jellyBlue font-bold text-lg">Bootstrap</span>
                                         </div>
                                     </article>
                                     <article>
                                         <div class="flex items-center space-x-1">
-                                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-javascript" width="48" height="48" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="tool-icon icon icon-tabler icon-tabler-brand-javascript" width="48" height="48" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                                                 <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
                                                 <path d="M20 4l-2 14.5l-6 2l-6 -2l-2 -14.5z"></path>
                                                 <path d="M7.5 8h3v8l-2 -1"></path>
                                                 <path d="M16.5 8h-2.5a.5 .5 0 0 0 -.5 .5v3a.5 .5 0 0 0 .5 .5h1.423a.5 .5 0 0 1 .495 .57l-.418 2.93l-2 .5"></path>
                                             </svg>
-                                            <span class="font-barlow text-jellyBlue font-bold text-lg">JavaScript</span>
+                                            <span class="jelly font-barlow text-jellyBlue font-bold text-lg">JavaScript</span>
                                         </div>
                                     </article>
                                 </section>
@@ -190,10 +192,10 @@
                             <!-- Back-End -->
                             <div>
                                 <section class="grid grid-cols-2 grid-rows-2">
-                                    <h2 class="font-firaSans text-spaceCadet font-bold text-2xl col-span-2 text-center">Back-End</h2>
+                                    <h2 class="desc font-firaSans text-spaceCadet font-bold text-2xl col-span-2 text-center">Back-End</h2>
                                     <article>
                                         <div class="flex items-center space-x-1">
-                                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-php" width="48" height="48" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="tool-icon icon icon-tabler icon-tabler-brand-php" width="48" height="48" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                                                 <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
                                                 <path d="M12 12m-10 0a10 9 0 1 0 20 0a10 9 0 1 0 -20 0"></path>
                                                 <path d="M5.5 15l.395 -1.974l.605 -3.026h1.32a1 1 0 0 1 .986 1.164l-.167 1a1 1 0 0 1 -.986 .836h-1.653"></path>
@@ -201,17 +203,17 @@
                                                 <path d="M12 7.5l-1 5.5"></path>
                                                 <path d="M11.6 10h2.4l-.5 3"></path>
                                             </svg>
-                                            <span class="font-barlow text-jellyBlue font-bold text-lg">PHP</span>
+                                            <span class="jelly font-barlow text-jellyBlue font-bold text-lg">PHP</span>
                                         </div>
                                     </article>
                                     <article>
                                         <div class="flex items-center space-x-1">
-                                            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-mysql" width="48" height="48" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                            <svg xmlns="http://www.w3.org/2000/svg" class="tool-icon icon icon-tabler icon-tabler-brand-mysql" width="48" height="48" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                                                 <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
                                                 <path d="M13 21c-1.427 -1.026 -3.59 -3.854 -4 -6c-.486 .77 -1.501 2 -2 2c-1.499 -.888 -.574 -3.973 0 -6c-1.596 -1.433 -2.468 -2.458 -2.5 -4c-3.35 -3.44 -.444 -5.27 2.5 -3h1c8.482 .5 6.421 8.07 9 11.5c2.295 .522 3.665 2.254 5 3.5c-2.086 -.2 -2.784 -.344 -3.5 0c.478 1.64 2.123 2.2 3.5 3"></path>
                                                 <path d="M9 7h.01"></path>
                                             </svg>
-                                            <span class="font-barlow text-jellyBlue font-bold text-lg">MySql</span>
+                                            <span class="jelly font-barlow text-jellyBlue font-bold text-lg">MySql</span>
                                         </div>
                                     </article>
                                 </section>
@@ -219,9 +221,9 @@
                             <!-- CMS -->
                             <div>
                                 <section class="grid grid-cols-2 grid-rows-2">
-                                    <h2 class="font-firaSans text-spaceCadet font-bold text-2xl col-span-2 text-center">CMS</h2>
+                                    <h2 class="desc font-firaSans text-spaceCadet font-bold text-2xl col-span-2 text-center">CMS</h2>
                                     <article class="flex items-center space-x-1">
-                                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-wordpress" width="48" height="48" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="tool-icon icon icon-tabler icon-tabler-brand-wordpress" width="48" height="48" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                                             <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
                                             <path d="M9.5 9h3"></path>
                                             <path d="M4 9h2.5"></path>
@@ -230,16 +232,16 @@
                                             <path d="M18 11c.177 -.528 1 -1.364 1 -2.5c0 -1.78 -.776 -2.5 -1.875 -2.5c-.898 0 -1.125 .812 -1.125 1.429c0 1.83 2 2.058 2 3.571z"></path>
                                             <path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"></path>
                                         </svg>
-                                        <span class="font-barlow text-jellyBlue font-bold text-lg">Wordpress</span>
+                                        <span class="jelly font-barlow text-jellyBlue font-bold text-lg">Wordpress</span>
                                     </article>
                                 </section>
                             </div>
                             <!-- Tools -->
                             <div>
                                 <section class="grid grid-cols-2 grid-rows-2">
-                                    <h2 class="font-firaSans text-spaceCadet font-bold text-2xl col-span-2 text-center">Tools</h2>
+                                    <h2 class="desc font-firaSans text-spaceCadet font-bold text-2xl col-span-2 text-center">Tools</h2>
                                     <article class="flex items-center space-x-1">
-                                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-git" width="48" height="48" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="tool-icon icon icon-tabler icon-tabler-brand-git" width="48" height="48" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                                             <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
                                             <path d="M16 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
                                             <path d="M12 8m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"></path>
@@ -249,16 +251,16 @@
                                             <path d="M11 7l-1.9 -1.9"></path>
                                             <path d="M13.446 2.6l7.955 7.954a2.045 2.045 0 0 1 0 2.892l-7.955 7.955a2.045 2.045 0 0 1 -2.892 0l-7.955 -7.955a2.045 2.045 0 0 1 0 -2.892l7.955 -7.955a2.045 2.045 0 0 1 2.892 0z"></path>
                                         </svg>
-                                        <span class="font-barlow text-jellyBlue font-bold text-lg">Git</span>
+                                        <span class="jelly font-barlow text-jellyBlue font-bold text-lg">Git</span>
                                     </article>
                                     <article class="flex items-center space-x-1">
-                                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-figma" width="48" height="48" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="tool-icon icon icon-tabler icon-tabler-brand-figma" width="48" height="48" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                                             <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
                                             <path d="M15 12m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0"></path>
                                             <path d="M6 3m0 3a3 3 0 0 1 3 -3h6a3 3 0 0 1 3 3v0a3 3 0 0 1 -3 3h-6a3 3 0 0 1 -3 -3z"></path>
                                             <path d="M9 9a3 3 0 0 0 0 6h3m-3 0a3 3 0 1 0 3 3v-15"></path>
                                         </svg>
-                                        <span class="font-barlow text-jellyBlue font-bold text-lg">Figma</span>
+                                        <span class="jelly font-barlow text-jellyBlue font-bold text-lg">Figma</span>
                                     </article>
                                 </section>
                             </div>
@@ -270,11 +272,11 @@
     </section>
 
     <!-- Projects Section -->
-    <section id="projects" class="main-section mx-auto px-8 min-h-screen py-14 flex items-center justify-center">
+    <section id="projects" class="main-section mx-auto px-8 min-h-screen pt-[6rem] pb-[5rem] flex items-center justify-center">
         <!-- Projects Main Container -->
         <div>
             <!-- Projects Title -->
-            <h1 class="text-center font-firaSans font-bold text-3xl md:text-5xl underline underline-offset-[.64rem] md:underline-offset-[.75rem] decoration-desirePink">Projects</h1>
+            <h1 class="honey jelly-decoration text-center font-firaSans font-bold text-3xl md:text-5xl underline underline-offset-[.64rem] md:underline-offset-[.75rem] decoration-desirePink">Projects</h1>
             <!-- Projects Container -->
             <section class="flex items-center flex-col mt-10 space-y-10">
                 <!-- Project Sections -->
@@ -289,66 +291,66 @@
         </div>
     </section>
     <!-- Contact Section -->
-    <section id="contact" class="main-section mx-auto py-16 md:py-5 px-8 h-full">
+    <section id="contact" class="main-section mx-auto pt-[6rem] pb-[5rem] md:py-5 px-8 h-full">
         <!-- Contact Main Container -->
         <div>
             <!-- Contact Title -->
-            <h1 class="text-center font-firaSans font-bold text-3xl md:text-5xl underline underline-offset-[.64rem] md:underline-offset-[.75rem] decoration-desirePink">Contact Me</h1>
+            <h1 class="honey jelly-decoration text-center font-firaSans font-bold text-3xl md:text-5xl underline underline-offset-[.64rem] md:underline-offset-[.75rem] decoration-desirePink">Contact Me</h1>
             <!-- Contact Content -->
             <section class="mt-8 leading-5 md:leading-1 flex items-center justify-center">
-                <p class="text-spaceCadet font-bold text-lg md:text-2xl">
+                <p class="desc text-spaceCadet font-bold text-lg md:text-2xl">
                     Have an idea? Want to collaborate on projects together? Or Want to connect? 
                     Go ahead and send me a message and I'll get back to you as soon as I can. Thank you. 
                 </p>
             </section>
             <!-- Contact Form Section -->
-            <section class="w-full flex items-center justify-center mt-5">
+            <section class="w-full flex items-center justify-center">
                 <section class="w-full max-w-4xl flex flex-col items-start justify-center space-y-3">
-                    <section class="w-full max-w-4xl">
+                    <section class="w-full max-w-4xl mt-3">
                         <form id="contact-form" action="https://formsubmit.co/0011cbb683481e6cefbda2f541b6b5d4" method="POST" class="flex flex-col items-center justify-start space-y-3 space-x-0 md:flex-row md:items-start md:space-x-8 md:space-y-0">
                             <!-- Text Inputs -->
                             <section class="w-full max-w-4xl space-y-4">
                                 <div>
-                                    <label for="name-input" class="block mb-2 text-xl font-bold font-firaSans">Name</label>
-                                    <input name="name" type="text" id="name-input" class="transition focus:delay-150 duration-500 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-black focus:border-black block w-full p-3" placeholder="Full Name" required>
+                                    <label for="name-input" class="form-labels block mb-2 text-xl font-bold font-firaSans">Name</label>
+                                    <input name="name" type="text" id="name-input" class="input transition focus:delay-150 duration-500 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-3" placeholder="Full Name" required>
                                 </div>
                                 <div>
-                                    <label for="base-input" class="block mb-2 text-xl font-bold font-firaSans">E-Mail</label>
-                                    <input name="email" type="email" id="base-input" class="transition focus:delay-150 duration-500 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-3" placeholder="E-Mail Address" required>
+                                    <label for="base-input" class="form-labels block mb-2 text-xl font-bold font-firaSans">E-Mail</label>
+                                    <input name="email" type="email" id="base-input" class="input transition focus:delay-150 duration-500 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-3" placeholder="E-Mail Address" required>
                                 </div>
                                 <div>
-                                    <label for="subject-input" class="block mb-2 text-xl font-bold font-firaSans">Subject</label>
-                                    <input type="text" name="_subject" id="subject-input" class="transition focus:delay-150 duration-500 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-black focus:border-black block w-full p-3" placeholder="Subject" required>
+                                    <label for="subject-input" class="form-labels block mb-2 text-xl font-bold font-firaSans">Subject</label>
+                                    <input type="text" name="_subject" id="subject-input" class="input transition focus:delay-150 duration-500 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-3" placeholder="Subject" required>
                                 </div>
                             </section>
                             <!-- Textarea -->
                             <section class="w-full max-w-4xl">
-                                <label for="message" class="block mb-2 text-xl font-bold font-firaSans">Message</label>
-                                <textarea type="text" name="message" id="message" rows="11" class="transition focus:delay-150 duration-500 block p-3 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500" placeholder="What did you have in mind?" required></textarea>
+                                <label for="message" class="form-labels block mb-2 text-xl font-bold font-firaSans">Message</label>
+                                <textarea type="text" name="message" id="message" rows="11" class="input transition focus:delay-150 duration-500 block p-3 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-blue-500" placeholder="What did you have in mind?" required></textarea>
                             </section>
                         </form>
                     </section>
                     <section class="w-40">
-                        <button form="contact-form" type="submit" class="w-40 transition hover:delay-150 duration-300 ease-in-out text-white bg-jellyBlue hover:bg-spaceCadet focus:ring-4 focus:ring-blue-300 font-bold font-firaSans rounded-lg px-5 py-2.5 mr-2 mb-2 focus:outline-none">Send Message</button>
+                        <button form="contact-form" type="submit" class="form-btn w-40 transition hover:delay-150 duration-300 ease-in-out text-white bg-jellyBlue hover:bg-spaceCadet focus:ring-4 focus:ring-blue-300 font-bold font-firaSans rounded-lg px-5 py-2.5 mr-2 mb-2 focus:outline-none">Send Message</button>
                     </section>
                 </section>
             </section>
         </div>
     </section>
     <!-- Footer -->
-    <footer class="text-sm text-honeyDew font-firaSans h-14 flex items-center justify-between w-full py-2 px-8 bg-spaceCadet">
+    <footer class="footer text-[.8rem] sm:text-sm font-firaSans h-14 flex items-center justify-between w-full py-2 px-8 bg-spaceCadet">
         <section>
-            <span>Copyright &copy Jorge Alvarado 2023, All Rights Reserved</span>
+            <span class="black text-honeyDew font-bold">Copyright &copy Jorge Alvarado 2023, All Rights Reserved</span>
         </section>
         <section class="flex items-center space-x-2">
             <a href="https://github.com/Alvarado08" target="_blank" title="Github">
-                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="28" height="28" viewBox="0 0 24 24" stroke-width="2" stroke="#F1FAEE" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <svg xmlns="http://www.w3.org/2000/svg" class="footer-icon icon icon-tabler icon-tabler-brand-github" width="28" height="28" viewBox="0 0 24 24" stroke-width="3" stroke="#F1FAEE" fill="none" stroke-linecap="round" stroke-linejoin="round">
                     <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
                     <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5"></path>
                 </svg>
             </a>
             <a href="https://www.icodethis.com/jalva08" target="_blank" title="iCodeThis">
-                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-device-desktop-code" width="28" height="28" viewBox="0 0 24 24" stroke-width="2" stroke="#F1FAEE" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <svg xmlns="http://www.w3.org/2000/svg" class="footer-icon icon icon-tabler icon-tabler-device-desktop-code" width="28" height="28" viewBox="0 0 24 24" stroke-width="3" stroke="#F1FAEE" fill="none" stroke-linecap="round" stroke-linejoin="round">
                     <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
                     <path d="M12.5 16h-8.5a1 1 0 0 1 -1 -1v-10a1 1 0 0 1 1 -1h16a1 1 0 0 1 1 1v8"></path>
                     <path d="M7 20h4"></path>
@@ -358,7 +360,7 @@
                 </svg>
             </a>
             <a href="https://twitter.com/jalva08" target="_blank" title="Twitter">
-                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-twitter" width="28" height="28" viewBox="0 0 24 24" stroke-width="2" stroke="#F1FAEE" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                <svg xmlns="http://www.w3.org/2000/svg" class="footer-icon icon icon-tabler icon-tabler-brand-twitter" width="28" height="28" viewBox="0 0 24 24" stroke-width="3" stroke="#F1FAEE" fill="none" stroke-linecap="round" stroke-linejoin="round">
                     <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
                     <path d="M22 4.01c-1 .49 -1.98 .689 -3 .99c-1.121 -1.265 -2.783 -1.335 -4.38 -.737s-2.643 2.06 -2.62 3.737v1c-3.245 .083 -6.135 -1.395 -8 -4c0 0 -4.182 7.433 4 11c-1.872 1.247 -3.739 2.088 -6 2c3.308 1.803 6.913 2.423 10.034 1.517c3.58 -1.04 6.522 -3.723 7.651 -7.742a13.84 13.84 0 0 0 .497 -3.753c0 -.249 1.51 -2.772 1.818 -4.013z"></path>
                 </svg>

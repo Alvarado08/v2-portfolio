@@ -58,5 +58,48 @@ section {
 }
 
 .notactive:hover::after {
-    width: 40% !important;
+    width: 40%;
+}
+
+/* Dark Mode Navigation */
+.active2 {
+    position: relative;
+    text-decoration: none;
+    transition: background-color 10s ease;
+    vertical-align: middle;
+}
+
+.notactive2 {
+    position: relative;
+    text-decoration: none;
+    transition: background-color 10s ease;
+    vertical-align: middle;
+}
+
+.active2::after {
+    content: "";
+    position: absolute;
+    bottom: -4px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40%; /* Adjust the width of the underline */
+    height: 2.9px;
+    background-color: #45789D; /* Adjust the color of the underline */
+    transition: width 0.3s ease; /* Add transition for width property */
+}
+
+.notactive2::after {
+    content: "";
+    position: absolute;
+    bottom: -4px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0%; /* Adjust the width of the underline */
+    height: 2.9px;
+    background-color: #45789D; /* Adjust the color of the underline */
+    transition: width 0.3s ease; /* Add transition for width property */
+}
+
+.notactive2:hover::after {
+    width: 40%;
 }

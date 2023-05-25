@@ -3,12 +3,233 @@ const projectsGrid = document.querySelector("#projects-grid");
 const navBar = document.querySelector("#nav-bar");
 const menuBtn = document.querySelector("#menu-btn");
 const menuItems = document.querySelector("#menu-items");
+const menuLinks = document.querySelectorAll(".items");
+//For Theme
+const logo = document.querySelector("#logo");
+const themeIcon = document.querySelectorAll("#theme-icon");
+const blackBody = document.querySelector("body");
+const honeyDew = document.querySelectorAll(".honey");
+const hello = document.querySelector(".hello");
+const desc = document.querySelectorAll(".desc");
+const jellyBlue = document.querySelectorAll(".jelly");
+const jellyBlueDecoration = document.querySelectorAll(".jelly-decoration");
+const spaceCadet = document.querySelector(".cadet");
+const blackFormLabels = document.querySelectorAll(".form-labels");
+const heroIcons = document.querySelectorAll(".hero-social");
+const toolIcons = document.querySelectorAll(".tool-icon");
+const footer = document.querySelector(".footer");
+const black = document.querySelector(".black");
+const footerIcons = document.querySelectorAll(".footer-icon");
+const inputs = document.querySelectorAll(".input");
+const formBtn = document.querySelector(".form-btn");
 
 //Animations
 const timeline = gsap.timeline({defaults: {duration: 2}});
 timeline.from("#logo", {opacity: 0})
-    .from("#hero-info",{opacity: 0, stagger: .5}, 1)
-    .from("#headshot",{x: "100vw", ease: "sine.out"}, "<1.5")        
+    .from(".items", {opacity: 0, stagger: .5})
+    .from("#hero-info",{opacity: 0, stagger: .5}, "<.5")
+    .from("#headshot",{x: "100vw", ease: "sine.out"}, "<1.5");
+        
+//Theme 
+function navBarCadet(){
+    if(navBar.classList.contains("bg-white")){
+        navBar.classList.remove("bg-white");
+        navBar.classList.add("bg-spaceCadet");
+    }else{
+        navBar.classList.remove("bg-spaceCadet");
+        navBar.classList.add("bg-white");
+    }
+}
+function menuBtnWhite(){
+    if(menuBtn.getAttribute("src") === "src/svg/menu.svg"){
+        menuBtn.setAttribute("src", "src/svg/menu-white.svg");
+    }else{
+        menuBtn.setAttribute("src", "src/svg/menu.svg");
+    }
+}
+
+function toBlack(){
+    if(blackBody.classList.contains("bg-honeyDew")){
+        blackBody.classList.remove("bg-honeyDew");
+        blackBody.classList.add("bg-black");
+    }else{
+        blackBody.classList.remove("bg-black");
+        blackBody.classList.add("bg-honeyDew");
+    }
+    
+    if(black.classList.contains("text-honeyDew")){
+        black.classList.remove("text-honeyDew");
+        black.classList.remove("text-black");
+    }else{
+        black.classList.remove("text-black");
+        black.classList.add("text-honeyDew");
+    }
+}
+
+function activeLinksToJelly(elem){
+    if(elem.classList.contains("active")){
+        elem.classList.remove("active");
+        elem.classList.add("active2");
+    }else{
+        elem.classList.remove("active2");
+        elem.classList.add("active");
+    }
+}
+
+function getLogo(){
+    if(logo.getAttribute("src") === "src/img/FullLogo_Transparent_NoBuffer.png"){
+        logo.setAttribute("src", "src/img/white-logo.png");
+    }else{
+        logo.setAttribute("src", "src/img/FullLogo_Transparent_NoBuffer.png");
+    }
+}
+
+function getThemeIconColor(icon){
+    if(icon.getAttribute("src") === "src/svg/moon.svg"){
+        icon.setAttribute("src", "src/svg/sun-white.svg");
+    }else{
+        icon.setAttribute("src", "src/svg/moon.svg");
+    }
+}
+
+function fromSpaceCadetPink(){
+    if(hello.classList.contains("text-spaceCadet")){
+        hello.classList.remove("text-spaceCadet");
+        hello.classList.add("text-desirePink");
+    }else{
+        hello.classList.remove("text-desirePink");
+        hello.classList.add("text-spaceCadet");
+    }
+}
+
+function fromSpaceCadetHoney(elem){
+    if(elem.classList.contains("text-spaceCadet")){
+        elem.classList.remove("text-spaceCadet");
+        elem.classList.add("text-honeyDew");
+    }else{
+        elem.classList.remove("text-honeyDew");
+        elem.classList.add("text-spaceCadet");
+    }
+}
+
+function fromJellyBlueText(elem){
+    if(elem.classList.contains("text-jellyBlue")){
+        elem.classList.remove("text-jellyBlue");
+        elem.classList.add("text-desirePink");
+    }else{
+        elem.classList.remove("text-desirePink");
+        elem.classList.add("text-jellyBlue");
+    }
+}
+
+function toJellyBlueDeco(elem){
+    if(elem.classList.contains("decoration-desirePink")){
+        elem.classList.remove("decoration-desirePink");
+        elem.classList.add("decoration-jellyBlue");
+    }else{
+        elem.classList.remove("decoration-jellyBlue");
+        elem.classList.add("decoration-desirePink");
+    }
+}
+
+function heroIconsPink(elem){
+    if(elem.getAttribute("stroke") === "currentColor"){
+        elem.setAttribute("stroke", "#E63946");
+    }else{
+        elem.setAttribute("stroke", "currentColor");
+    }
+}
+
+function toolIconsHoney(elem){
+    if(elem.getAttribute("stroke") === "currentColor"){
+        elem.setAttribute("stroke", "#F1FAEE");
+    }else{
+        elem.setAttribute("stroke", "currentColor");
+    }
+}
+
+function footerToWhite(){
+    if(footer.classList.contains("bg-spaceCadet")){
+        footer.classList.remove("bg-spaceCadet");
+        footer.classList.add("bg-honeyDew");
+    }else{
+        footer.classList.remove("bg-honeyDew");
+        footer.classList.add("bg-spaceCadet");
+    }
+}
+
+function footerIconsWhite(elem){
+    if(elem.getAttribute("stroke") === "#F1FAEE"){
+        elem.setAttribute("stroke", "currentColor");
+    }else{
+        elem.setAttribute("stroke", "#F1FAEE");
+    }
+}
+
+function inputOutlineHoney(elem){
+    if(elem.classList.contains("border-gray-300")){
+        elem.classList.remove("border-gray-300","bg-gray-50","text-gray-900","focus:ring-blue-500","focus:border-blue-500");
+        elem.classList.add("border-[#F1FAEE]","bg-black","text-honeyDew","focus:ring-[#F1FAEE]","focus:border-[#F1FAEE]","placeholder-[#F1FAEE]");
+    }else{
+        elem.classList.remove("border-[#F1FAEE]","bg-black","text-honeyDew","focus:ring-[#F1FAEE]","focus:border-[#F1FAEE]","placeholder-[#F1FAEE]");
+        elem.classList.add("border-gray-300","bg-gray-50","text-gray-900","focus:ring-blue-500","focus:border-blue-500");
+    }
+}
+
+function btnSpaceCadet(){
+    if(formBtn.classList.contains("bg-jellyBlue")){
+        formBtn.classList.remove("bg-jellyBlue","hover:bg-spaceCadet");
+        formBtn.classList.add("bg-spaceCadet","hover:bg-jellyBlue");
+    }else{
+        formBtn.classList.remove("bg-spaceCadet","hover:bg-jellyBlue");
+        formBtn.classList.add("bg-jellyBlue","hover:bg-spaceCadet");
+    }
+}
+
+//Click event for dark mode
+themeIcon.forEach(icon => {
+    icon.addEventListener("click", () => {
+        getLogo();
+        menuBtnWhite();
+        //navBarCadet();
+        toBlack();
+        getThemeIconColor(icon);
+        honeyDew.forEach(item => {
+        item.classList.toggle("text-honeyDew");
+      })
+    //   menuLinks.forEach(item => {
+    //     activeLinksToJelly(item);
+    //   })
+      jellyBlueDecoration.forEach(item => {
+        toJellyBlueDeco(item);
+      })
+      fromSpaceCadetPink();  
+      desc.forEach(item => {
+        fromSpaceCadetHoney(item);
+      })
+      heroIcons.forEach(item => {
+        heroIconsPink(item);
+      })
+      jellyBlue.forEach(item => {
+        fromJellyBlueText(item);
+      })
+      toolIcons.forEach(item => {
+        toolIconsHoney(item);
+      })
+      blackFormLabels.forEach(item => {
+        item.classList.toggle("text-desirePink");
+      })
+      footerToWhite();
+      footerIcons.forEach(item => {
+        footerIconsWhite(item);
+      })
+      inputs.forEach(item => {
+        inputOutlineHoney(item);
+      })
+      btnSpaceCadet();
+    })
+})
+
 
 //Responsive menu sections
 let prevScrollPos = window.pageYOffset;
@@ -59,8 +280,6 @@ menuBtn.addEventListener("click", () => {
         menuItems.classList.add("opacity-0","top-[-400px]");
     }
 })
-
-//Theme
 
 //Projects Array
 const projects = [
@@ -228,7 +447,7 @@ const projects = [
 function createCard(project){
     const card = document.createElement("article");
     card.innerHTML = `
-    <article class="w-full max-w-xs rounded shadow-lg p-5 transition hover:delay-150 duration-700 ease-in-out hover:scale-105 hover:cursor-pointer">
+    <article class="bg-honeyDew w-full max-w-xs rounded shadow-lg p-5 transition hover:delay-150 duration-700 ease-in-out hover:scale-105 hover:cursor-pointer">
         <div class="w-full h-40 overflow-hidden rounded">
             <img src="${project.img}" alt="${project.title}" class="object-cover w-full h-40">
         </div>
@@ -256,6 +475,8 @@ function showProjects(){
 }
 
 showProjects();
+
+//Navbar behavior according to scroll and mobile views
 window.addEventListener("scroll", () => {
     const currentScrollPos = window.pageYOffset;
     const viewPort = window.innerWidth;
