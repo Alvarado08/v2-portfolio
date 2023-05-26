@@ -40,19 +40,76 @@ function navBarCadet(){
         navBar.classList.add("bg-white");
     }
 }
+function menuItemsCadet(){
+    if(menuItems.classList.contains("bg-white")){
+        menuItems.classList.remove("bg-white");
+        menuItems.classList.add("bg-spaceCadet");
+    }else{
+        menuItems.classList.remove("bg-spaceCadet");
+        menuItems.classList.add("bg-white");
+    }
+}
+function menuItemsWhite(){
+    if(menuItems.classList.contains("bg-spaceCadet")){
+        menuItems.classList.remove("bg-spaceCadet");
+        menuItems.classList.add("bg-White");
+    }
+}
 function menuBtnWhite(){
     if(menuBtn.getAttribute("src") === "src/svg/menu.svg"){
+        menuBtn.classList.remove("light");
         menuBtn.setAttribute("src", "src/svg/menu-white.svg");
     }else{
+        menuBtn.classList.add("light");
         menuBtn.setAttribute("src", "src/svg/menu.svg");
+    }
+}
+
+function menuCloseBtnWhite(){
+    if(menuBtn.getAttribute("src") === "src/svg/close.svg" && !menuBtn.classList.contains("closed")){
+        menuBtn.classList.remove("light");
+        menuBtn.setAttribute("src", "src/svg/close-white.svg");
+    }else{
+        menuBtn.classList.add("light");
+        menuBtn.setAttribute("src", "src/svg/close.svg");
+    }
+}
+
+function menuToggleWhite(){
+    if(menuBtn.setAttribute("src","src/svg/menu-white.svg") || menuBtn.classList.contains("closed")){
+        menuBtn.classList.remove("closed");
+        menuBtn.setAttribute("src","src/svg/close-white.svg");
+        menuItems.classList.remove("opacity-0");
+        menuItems.classList.add("top-[80px]","opacity-100");
+    }else{
+        menuBtn.classList.add("closed");
+        menuBtn.setAttribute("src","src/svg/menu-white.svg");
+        menuItems.classList.remove("top-[80px]","opacity-100");
+        menuItems.classList.add("opacity-0");
+    }
+}
+
+function menuToggleBlack(){
+    if(menuBtn.setAttribute("src","src/svg/menu.svg") || menuBtn.classList.contains("closed")){
+        menuBtn.classList.remove("closed");
+        menuBtn.setAttribute("src","src/svg/close.svg");
+        menuItems.classList.remove("opacity-0");
+        menuItems.classList.add("top-[80px]","opacity-100");
+    }else{
+        menuBtn.classList.add("closed");
+        menuBtn.setAttribute("src","src/svg/menu.svg");
+        menuItems.classList.remove("top-[80px]","opacity-100");
+        menuItems.classList.add("opacity-0");
     }
 }
 
 function toBlack(){
     if(blackBody.classList.contains("bg-honeyDew")){
+        blackBody.classList.remove("light");
         blackBody.classList.remove("bg-honeyDew");
         blackBody.classList.add("bg-black");
     }else{
+        blackBody.classList.add("light");
         blackBody.classList.remove("bg-black");
         blackBody.classList.add("bg-honeyDew");
     }
@@ -188,10 +245,17 @@ function btnSpaceCadet(){
 
 //Click event for dark mode
 themeIcon.forEach(icon => {
+    const viewPort = window.innerWidth;
     icon.addEventListener("click", () => {
         getLogo();
-        menuBtnWhite();
-        //navBarCadet();
+        navBarCadet();
+        menuItemsCadet();
+        //menuBtnWhite();
+        if (menuBtn.classList.contains("closed")) {
+            menuBtnWhite();
+        } else {
+            menuCloseBtnWhite();
+          }
         toBlack();
         getThemeIconColor(icon);
         honeyDew.forEach(item => {
@@ -230,9 +294,56 @@ themeIcon.forEach(icon => {
     })
 })
 
+//Mobile Menu
+menuBtn.addEventListener("click", () => {
+    if (menuBtn.classList.contains("light")) {
+        menuToggleBlack();
+    }else {
+        menuToggleWhite();
+    }
+    // if(menuBtn.getAttribute("src") === "src/svg/menu-white.svg"){
+    //     menuBtn.setAttribute("src","src/svg/close-white.svg");
+    // }else{
+    //     menuBtn.setAttribute("src","src/svg/menu-white.svg");
+    // }
 
-//Responsive menu sections
-let prevScrollPos = window.pageYOffset;
+    // if(menuBtn.classList.contains("menu")){
+    //     menuBtn.classList.remove("menu");
+    //     menuItems.classList.remove("opacity-0");
+    //     menuItems.classList.add("top-[80px]","opacity-100");
+    // }else{
+    //     menuBtn.classList.add("menu");
+    //     menuBtn.setAttribute("src","src/svg/menu.svg");
+    //     menuItems.classList.remove("top-[80px]","opacity-100");
+    //     menuItems.classList.add("opacity-0","top-[-400px]");
+    // }
+})
+
+//Navbar behavior according to scroll, mobile views and theme
+// function scrollBehavior(){
+//     const currentScrollPos = window.pageYOffset;
+//     const viewPort = window.innerWidth;
+
+//     if(currentScrollPos > 0){
+//         if(!blackBody.classList.contains("light")){
+//             navBar.classList.add("bg-spaceCadet");
+//             navBar.classList.add("bg-spaceCadet");
+//         }else if(viewPort <= 767 && blackBody.classList.contains("light")){
+//             navBar.classList.add("bg-white");
+//             menuItems.classList.add("bg-white");
+//         }
+//         else{
+//             navBar.classList.add("bg-white");
+//         }
+//     }else{
+//         navBar.classList.remove("bg-spaceCadet","bg-white");
+//         menuItems.classList.remove("bg-white");
+//     }
+// }
+// window.addEventListener("scroll", scrollBehavior);
+
+
+//Responsive active navbar links
 function updateNavigation(){
     const sections = document.querySelectorAll(".main-section");
     const navLinks = document.querySelectorAll("#menu-items a");
@@ -242,7 +353,6 @@ function updateNavigation(){
         const sectionHeight = section.clientHeight;
         if(window.pageYOffset >= sectionTop - sectionHeight / 2){
             const sectionId = section.getAttribute("id");
-            // navBar.classList.add("bg-white", "shadow");
 
             navLinks.forEach(link => {
                 if(link.getAttribute("href") === `#${sectionId}`){
@@ -265,21 +375,6 @@ function updateNavigation(){
         }
     })
 }
-
-//Mobile Menu
-menuBtn.addEventListener("click", () => {
-    if(menuBtn.classList.contains("menu")){
-        menuBtn.classList.remove("menu");
-        menuBtn.setAttribute("src","src/svg/close.svg");
-        menuItems.classList.remove("opacity-0");
-        menuItems.classList.add("top-[80px]","opacity-100");
-    }else{
-        menuBtn.classList.add("menu");
-        menuBtn.setAttribute("src","src/svg/menu.svg");
-        menuItems.classList.remove("top-[80px]","opacity-100");
-        menuItems.classList.add("opacity-0","top-[-400px]");
-    }
-})
 
 //Projects Array
 const projects = [
@@ -333,15 +428,27 @@ const projects = [
         ]
     },
     {
-        img: "src/img/projects/meeting-feed.png",
-        title: "Meeting Feedback",
-        desc: "A dynamic rating system with a stylish and responsive UI that can be easily integrated with any project.",
+        img: "src/img/projects/portfolio.png",
+        title: "Portfolio",
+        desc: `
+            A second version of my personal portfolio. Responsive, light and dark mode and a functional contact form.
+        `,
         tools: ["HTML","Tailwind","JS"],
-        tag: "ICodeThis",
+        tag: "Personal",
         links: [
             {
                 a: `
-                <a href="https://www.icodethis.com/submissions/8690" target="_blank" title="Meeting Feedback"">
+                <a href="https://github.com/Alvarado08/v2-portfolio" target="_blank" title="Github">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="30" height="30" viewBox="0 0 24 24" stroke-width="3" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5"></path>
+                </svg>
+                </a>
+                `
+            },
+            {
+                a: `
+                <a href="https://jalvarado.netlify.app" target="_blank" title="Live"">
                 <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-external-link" width="30" height="30" viewBox="0 0 24 24" stroke-width="3" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                     <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
                     <path d="M12 6h-6a2 2 0 0 0 -2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-6"></path>
@@ -354,28 +461,15 @@ const projects = [
         ]
     },
     {
-        img: "src/img/projects/personcard.png",
-        title: "User Card",
-        desc: `
-            Population of 
-            card contents with random image, name and greeting depending on the person's gender.
-        `,
+        img: "src/img/projects/meeting-feed.png",
+        title: "Meeting Feedback",
+        desc: "A dynamic rating system with a stylish and responsive UI that can be integrated with other projects.",
         tools: ["HTML","Tailwind","JS"],
-        tag: "Personal",
+        tag: "ICodeThis",
         links: [
             {
                 a: `
-                <a href="https://github.com/Alvarado08/person-card-generator" target="_blank" title="Github">
-                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="30" height="30" viewBox="0 0 24 24" stroke-width="3" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                    <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5"></path>
-                </svg>
-                </a>
-                `
-            },
-            {
-                a: `
-                <a href="https://alvarado08.github.io/person-card-generator/" target="_blank" title="Live"">
+                <a href="https://www.icodethis.com/submissions/8690" target="_blank" title="Meeting Feedback"">
                 <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-external-link" width="30" height="30" viewBox="0 0 24 24" stroke-width="3" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
                     <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
                     <path d="M12 6h-6a2 2 0 0 0 -2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-6"></path>
@@ -476,21 +570,27 @@ function showProjects(){
 
 showProjects();
 
-//Navbar behavior according to scroll and mobile views
 window.addEventListener("scroll", () => {
-    const currentScrollPos = window.pageYOffset;
-    const viewPort = window.innerWidth;
+    // const currentScrollPos = window.pageYOffset;
+    // const viewPort = window.innerWidth;
 
-    if(currentScrollPos > 0) {
-        navBar.classList.add("bg-white", "shadow");
-        if(viewPort <= 767){
-            menuItems.classList.add("bg-white");
-        }
-    }else{
-        navBar.classList.remove("bg-white", "shadow");
-        menuItems.classList.remove("bg-white");
-    }
-      prevScrollPos = currentScrollPos;
+    // if(currentScrollPos > 0 || viewPort <= 767){
+
+    // }
+
+    // if(currentScrollPos > 0 || viewPort <= 767) {
+    //     if(blackBody.classList.contains("bg-black")){
+    //         navBar.classList.add("bg-spaceCadet", "shadow");
+    //     }else{
+    //         navBar.classList.add("bg-white", "shadow");
+    //     }
+    //     if(viewPort <= 767){
+    //         menuItems.classList.add("bg-white");
+    //     }
+    // }else{
+    //     navBar.classList.remove("bg-white", "bg-spaceCadet", "shadow");
+    //     menuItems.classList.remove("bg-white");
+    // }
 })
 
 window.addEventListener("scroll", updateNavigation);
