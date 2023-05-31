@@ -24,7 +24,7 @@ const inputs = document.querySelectorAll(".input");
 const formBtn = document.querySelector(".form-btn");
 
 //Animations
-const timeline = gsap.timeline({defaults: {duration: 2}});
+const timeline = gsap.timeline({defaults: {duration: 1}});
 timeline.from("#logo", {opacity: 0})
     .from(".items", {opacity: 0, stagger: .5})
     .from("#hero-info",{opacity: 0, stagger: .5}, "<.5")
@@ -541,7 +541,7 @@ const projects = [
 function createCard(project){
     const card = document.createElement("article");
     card.innerHTML = `
-    <article class="bg-honeyDew w-full max-w-xs rounded shadow-lg p-5 transition hover:delay-150 duration-700 ease-in-out hover:scale-105 hover:cursor-pointer">
+    <article class="bg-white w-full max-w-xs rounded shadow-lg p-5 transition hover:delay-150 duration-700 ease-in-out hover:scale-105 hover:cursor-pointer">
         <div class="w-full h-40 overflow-hidden rounded">
             <img src="${project.img}" alt="${project.title}" class="object-cover w-full h-40">
         </div>
