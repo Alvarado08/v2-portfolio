@@ -404,13 +404,46 @@ const projects = [
         ]
     },
     {
+        img: "src/img/projects/dios-proveera.png",
+        title: "Iglesia Bautista Dios Proveera",
+        desc: `
+            Iglesia Bautista Dios Proveera local church website with a blog focus and a functional contact form.
+        `,
+        tools: ["Astro","Tailwind"],
+        tag: "Freelance",
+        links: [
+            {
+                a: `
+                <a href="https://github.com/Alvarado08/dios-proveera" target="_blank" title="Github">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="30" height="30" viewBox="0 0 24 24" stroke-width="3" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5"></path>
+                </svg>
+                </a>
+                `
+            },
+            {
+                a: `
+                <a href="https://iglesiadiosproveera.com" target="_blank" title="Live"">
+                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-external-link" width="30" height="30" viewBox="0 0 24 24" stroke-width="3" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
+                    <path d="M12 6h-6a2 2 0 0 0 -2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-6"></path>
+                    <path d="M11 13l9 -9"></path>
+                    <path d="M15 4h5v5"></path>
+                </svg>
+                </a>
+                `
+            }
+        ]
+    },
+    {
         img: "src/img/projects/rayados.png",
         title: "Rayados Waller",
         desc: `
             Website for non-profit Rayados Waller Academy soccer league. Users can create an account, upload 
             required documents for registration and register players with online payment.
         `,
-        tools: ["Wordpress","CSS"],
+        tools: ["Wordpress"],
         tag: "Freelance",
         links: [
             {
@@ -428,43 +461,10 @@ const projects = [
         ]
     },
     {
-        img: "src/img/projects/portfolio.png",
-        title: "Portfolio",
-        desc: `
-            A second version of my personal portfolio. Responsive, light and dark mode and a functional contact form.
-        `,
-        tools: ["HTML","Tailwind","JS"],
-        tag: "Personal",
-        links: [
-            {
-                a: `
-                <a href="https://github.com/Alvarado08/v2-portfolio" target="_blank" title="Github">
-                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-github" width="30" height="30" viewBox="0 0 24 24" stroke-width="3" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                    <path d="M9 19c-4.3 1.4 -4.3 -2.5 -6 -3m12 5v-3.5c0 -1 .1 -1.4 -.5 -2c2.8 -.3 5.5 -1.4 5.5 -6a4.6 4.6 0 0 0 -1.3 -3.2a4.2 4.2 0 0 0 -.1 -3.2s-1.1 -.3 -3.5 1.3a12.3 12.3 0 0 0 -6.2 0c-2.4 -1.6 -3.5 -1.3 -3.5 -1.3a4.2 4.2 0 0 0 -.1 3.2a4.6 4.6 0 0 0 -1.3 3.2c0 4.6 2.7 5.7 5.5 6c-.6 .6 -.6 1.2 -.5 2v3.5"></path>
-                </svg>
-                </a>
-                `
-            },
-            {
-                a: `
-                <a href="https://jalvarado.netlify.app" target="_blank" title="Live"">
-                <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-external-link" width="30" height="30" viewBox="0 0 24 24" stroke-width="3" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                    <path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
-                    <path d="M12 6h-6a2 2 0 0 0 -2 2v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-6"></path>
-                    <path d="M11 13l9 -9"></path>
-                    <path d="M15 4h5v5"></path>
-                </svg>
-                </a>
-                `
-            }
-        ]
-    },
-    {
         img: "src/img/projects/meeting-feed.png",
         title: "Meeting Feedback",
-        desc: "A dynamic rating system with a stylish and responsive UI that can be integrated with other projects.",
-        tools: ["HTML","Tailwind","JS"],
+        desc: "A classic and dynamic rating system with a stylish and responsive UI.",
+        tools: ["Tailwind","JS"],
         tag: "ICodeThis",
         links: [
             {
@@ -485,9 +485,9 @@ const projects = [
         img: "src/img/projects/lonchi.png",
         title: "Salsas Lonchi",
         desc: `
-            PWA that works as a profit manager for a day's sales for a local habanero sauce family business.
+            PWA that works as a profit manager for a day's sales for Salsas Lonchi local habanero sauce family business.
         `,
-        tools: ["HTML","CSS","JS"],
+        tools: ["CSS","JS"],
         tag: "Personal",
         links: [
             {
@@ -518,7 +518,7 @@ const projects = [
         img: "src/img/projects/pending-invites.png",
         title: "Pending Invites",
         desc: "A modern and responsive UI mockup with dynamic options for joining or declining an invitation.",
-        tools: ["HTML","Tailwind","JS"],
+        tools: ["Tailwind","JS"],
         tag: "ICodeThis",
         links: [
             {
